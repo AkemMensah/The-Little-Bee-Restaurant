@@ -1,0 +1,142 @@
+.app-header {
+    background-color: #123910c0;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 0 0.2rem 0 0.2rem; */
+  }
+
+  @keyframes app-logo-pump{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.2);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  .app-logo{
+    margin-left: 10px;
+    pointer-events: none;
+    border-radius: 1.5rem;
+    margin-bottom: 20px;
+    margin-left: 1rem;
+    animation: app-logo-pump infinite 2s linear;
+  }
+  .navlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @keyframes header-run{
+    0%{
+      transform: translateX(-100%);
+    }
+    100%{
+      transform: translateX(100%);
+    }
+  }
+
+  .app-header p{
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 1.5rem;
+    animation: header-run 15s ease-in-out infinite;
+  }
+
+  .navlinks .images .bar{
+    display: none;
+  }
+
+  .navlinks ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    list-style: none;
+    margin-right: 10px;
+  }
+
+  .navlinks ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    padding: 10%;
+  }
+
+  .navlinks ul li a:hover{
+    color: #123910c0;
+    background-color: rgb(136, 247, 136);
+  }
+
+  .navlinks input[type=search]{
+    width: 20%;
+    border-radius: 1rem 0 0 1rem;
+    border: solid 0.3rem #000b072c;
+    padding: 0.5rem;
+    font-size:19px;
+    margin-bottom: 1rem;
+  }
+  .navlinks button{
+    border-radius: 0 1rem 1rem 0;
+    border: solid 0.3rem #000b072c;
+    padding: 0.5rem;
+    font-size:19px;
+    margin-bottom: 1rem;
+    margin-left: -5rem;
+    color: black;
+    font-weight: 900;
+  }
+  .navlinks button:hover{
+    background-color: #123910c0;
+    color: white;
+  }
+
+
+  @media screen and (max-width: 768px){
+    .app-header{
+      flex-direction: column;
+      align-items: center;
+    }
+    .navlinks{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .navlinks .images{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .navlinks .images .bar{
+      display: block;
+      font-size: 2rem;
+      color: white;
+      font-weight: 900;
+      margin-right: 1.5rem;
+    }
+    .navlinks button, input[type=search]{
+      display: none;
+    }
+    .navlinks ul{
+      display: none;
+      width: 100%;
+    }
+    .navlinks input[type=search]{
+      width: 50%;
+    }
+    .navlinks button{
+      margin-left: -2rem;
+    }
+  }

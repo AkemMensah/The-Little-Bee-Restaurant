@@ -14,6 +14,7 @@ class Reservation(models.Model):
     email = models.EmailField(max_length=50)
     occasion = models.CharField(choices=occasion_choices, max_length=50)
     no_of_guests = models.CharField(max_length=50)
+    special = models.CharField(max_length=50, default="No request")
     class Meta:
         db_table="Reservation"
 
