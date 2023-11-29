@@ -1,4 +1,5 @@
 import table from "../images/CTA.png";
+import "../styles/confirmBooking.css";
 
 function ConfirmBooking() {
   return (

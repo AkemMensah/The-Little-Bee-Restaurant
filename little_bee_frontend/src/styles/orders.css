@@ -1,0 +1,63 @@
+.orders{
+    background-color: darkolivegreen;
+    background-color: rgb(82, 119, 18);
+    margin-top: 0 ;
+    min-height: 20vh;
+    border-radius: 0.5rem;
+}
+
+.orders h1{
+    font-size: 2rem;
+    color: white;
+    margin: 0.5rem 0 0.5rem 3rem;
+} 
+
+.orders ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+}
+
+.orders ul li{
+    list-style: none;
+    font:1.7rem bolder sans-serif;
+    margin: 1rem 1rem;
+    padding: 1rem 0.5rem;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.orders>ul>li:hover {
+    background-color: #32cf2ac0;
+    color: white;
+    border: solid 0.5rem #000b072c;
+    cursor: pointer;
+
+}
+
+ a {
+    text-decoration: none;
+    color: black;
+}
+
+@media  screen and (max-width: 768px) {
+    .orders{
+         padding-bottom: 2rem;
+
+    }
+
+    .orders ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .orders ul li{
+        margin: 0.5rem;
+    }
+    .orders ul li:hover{
+        background-color: #32cf2ac0;
+        color: white;
+        border: solid 0.5rem #000b072c;
+    }
+ }

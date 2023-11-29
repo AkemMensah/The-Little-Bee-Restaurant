@@ -1,13 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Heading from "./components/Header";
-import Main from "./components/MainBdy";
+import Main from "./components/MainBody";
 import Footer from "./components/Footer";
-import BookingPage from "./components/ReservationPage";
+import BookingPage from "./components/BookingPage";
 import Orderform from "./components/MenuOrderPage";
-import ConfirmBooking from "./components/ConfirmbookingPage";
+import ConfirmBooking from "./components/ConfirmBookingPage";
 import ConfirmOrder from "./components/ConfirmOrderPage";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 
 function HomePage() {
