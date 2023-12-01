@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Heading from "./components/Header";
 import Main from "./components/MainBody";
@@ -9,13 +9,12 @@ import ConfirmBooking from "./components/ConfirmBookingPage";
 import ConfirmOrder from "./components/ConfirmOrderPage";
 import { Routes, Route} from "react-router-dom";
 
-
 function HomePage() {
   return (
     <>
     <Heading />
-      <Main />
-      <Footer />
+    <Main />
+    <Footer />
     </>
   );
 }

@@ -3,7 +3,7 @@ from datetime import datetime
 from django import forms
 
 
-occasion_choices = [('Birthday','birthday'),('Wedding','wedding'),('Anniversary','anniversay'),]
+occasion_choices = [('Birthday','birthday'),('Wedding','wedding'),('Anniversary','anniversay'),('Business','business'),('Other','other')]
 
 
 class Reservation(models.Model):
