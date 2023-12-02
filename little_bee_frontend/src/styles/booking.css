@@ -1,48 +1,54 @@
 .booking{
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
- .details{
-    width: 60%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
+
+
 .form-item{
     width:80%;
     height: 30px;
+    display: flex;
+    flex-direction: column;
     margin: 5% 3%;
 }
 .form-item input{
     border-radius: 5px;
-    border: none;
-    padding: 0.5rem;
+    padding: 1.3rem;
     font-size: 1.5rem;
 }
 .form-item select{
     width: 100%;
-    height: 40px;
     border-radius: 5px;
-    border: none;
+    margin: 0 0 0 0;
+    padding: 0.5rem;
     font-size: 1.5rem;
 }
 
+
 .form-item label{
     width: 400px;
-    font: 1.5rem solid black;
+    font: 1.6rem solid black;
 }
 .form-other{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
     font: 1.5rem solid black;
     width: 100%;
+}
+.form-other label{
+    text-align: left;
 }
 .form-text{
     display: flex;
@@ -50,32 +56,39 @@
     align-items: center;
     width: 80%;
     font: 1.5rem solid black;
+    margin: 0 0 0 -3.5rem;
 }
 .form-text label{
-    text-align: left;
-    margin: 1rem 0 -1rem -7rem;
+    margin: 0rem 0 0rem -10rem;
+    font: 1.5rem solid black;
 }
 .form-other textarea{
-    margin-top: 1rem;
-    width: 40%;
-    height: 80px;
+    width: 100%;
+    height: 4rem;
     font-size: 1.5rem;
     text-overflow: hidden;
 }
-.form-other button{
-    width: 40%;
-    height: 5rem;
-    border-radius: 5px;
+ button{
     border: 0.1rem solid black;
-    padding: 5px;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    background-color: lightcyan;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: rgb(13, 173, 173);
     cursor: pointer;
+    position: absolute;
+    bottom: -7rem;
+    left: 30%;
+    border-radius: 1.5rem;
 }
-.form-other button:hover{
-    background-color: lightskyblue;
+button:hover{
+    background-color: green;
 }
+
+
+.form-item .norm{
+   padding: 0.5rem;
+}
+
 
 @media screen and (max-width:768px){
     .details{

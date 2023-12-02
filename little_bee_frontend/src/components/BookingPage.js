@@ -63,7 +63,7 @@ function BookingForm({ form, setForm }) {
       return true;
     }
   };
-  
+  console.log(form)
 
   useEffect(() => {
     if (success == true) {
@@ -91,10 +91,10 @@ function BookingForm({ form, setForm }) {
     <div className="booking">
       <h1>My Reservation</h1>
       <form onSubmit={submitForm}>
-        <div className="details">
           <div className="form-item">
             <label htmlFor="customer_name">Name:</label>
             <input
+            className="norm"
               htmlFor="customer_name"
               type="text"
               placeholder={placeholders.customer_name}
@@ -106,6 +106,7 @@ function BookingForm({ form, setForm }) {
           <div className="form-item">
             <label htmlFor="phone">Phone:</label>
             <input
+            className="norm"
               htmlFor="phone"
               type="tel"
               placeholder={placeholders.phone}
@@ -117,6 +118,7 @@ function BookingForm({ form, setForm }) {
           <div className="form-item">
             <label htmlFor="email">Email:</label>
             <input
+            className="norm"
               htmlFor="email"
               type="email"
               id="email"
@@ -127,6 +129,7 @@ function BookingForm({ form, setForm }) {
           <div className="form-item">
             <label htmlFor="res-date">Choose date:</label>
             <input
+            className="select"
               type="date"
               id="res-date"
               name="res-date"
@@ -151,6 +154,7 @@ function BookingForm({ form, setForm }) {
           <div className="form-item">
             <label htmlFor="guests">Number of guests:</label>
             <input
+            className="norm"
               type="number"
               id="guests"
               name="guests"
@@ -160,13 +164,13 @@ function BookingForm({ form, setForm }) {
               onChange={(e) => setForm({ ...form, guests: e.target.value })}
             ></input>
           </div>
-          <div className="form-item">
+          <div className="form-item" id="occasion" >
             <label htmlFor="occasion">Occasion:</label>
             <select
               id="occasion"
               name="occasion"
               placeholder={placeholders.occasion}
-              className="form-item"
+              className="select"
               onChange={(e) => setForm({ ...form, occasion: e.target.value })}
             >
               <option value="birthday">Birthday</option>
@@ -187,15 +191,14 @@ function BookingForm({ form, setForm }) {
               onChange={(e) => setForm({ ...form, special: e.target.value })}
             ></textarea>
           </div>
+          </div>
           <button
-            className="form-item"
             type="submit"
             value="Make Reservation"
           >
             Make Reservation
           </button>
-        </div>
-        </div>
+        
       </form>
     </div>
   );

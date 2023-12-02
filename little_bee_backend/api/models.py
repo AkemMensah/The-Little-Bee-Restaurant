@@ -2,7 +2,6 @@ from django.db import models
 from datetime import datetime
 from django import forms
 
-
 occasion_choices = [('Birthday','birthday'),('Wedding','wedding'),('Anniversary','anniversay'),('Business','business'),('Other','other')]
 
 
@@ -18,7 +17,6 @@ class Reservation(models.Model):
     class Meta:
         db_table="Reservation"
 
-
 class Menu(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=5,decimal_places=2)
@@ -26,7 +24,6 @@ class Menu(models.Model):
     description = models.TextField()
     class Meta:
         db_table="Menu"
-
 
 class Order(models.Model):
     name = models.CharField(max_length=50)
