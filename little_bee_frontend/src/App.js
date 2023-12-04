@@ -7,6 +7,7 @@ import BookingPage from "./components/BookingPage";
 import Orderform from "./components/MenuOrderPage";
 import ConfirmBooking from "./components/ConfirmBookingPage";
 import ConfirmOrder from "./components/ConfirmOrderPage";
+import AddMenuPage from "./components/AddMenuPage";
 import { Routes, Route} from "react-router-dom";
 
 function HomePage() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/booking-form" element={<BookingPage />} />
         <Route path="/confirm-booking" element={<ConfirmBooking />} />
         <Route path="/confirm-order" element={<ConfirmOrder />} />
+        <Route path="/add-menu" element={<AddMenuPage />}/>
       </Routes>
     </>
   );

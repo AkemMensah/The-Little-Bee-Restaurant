@@ -46,23 +46,20 @@ function BookingForm({ form, setForm }) {
     return emailRegex.test(form.email);
   };
 
-  const isInValidForm = (form) => {
-    if (
-      form.name === "" ||
-      form.name.length < 3 ||
-      form.phone === "" ||
-      form.date === "" ||
-      form.time === "" ||
-      form.guests === 1 ||
-      form.occasion === "" ||
-      form.special === "" ||
-      !isValidEmail()
-    ) {
-      return false;
-    } else {
-      return true;
-    }
+  const isInValidForm = () => {
+    return (
+      form.name !== "" &&
+      form.name.length > 3 &&
+      form.phone !== "" &&
+      form.date !== "" &&
+      form.time !== "" &&
+      form.guests !== 1 &&
+      form.occasion !== "" &&
+      form.special !== "" &&
+      isValidEmail()
+    ) 
   };
+  console.log(isInValidForm)
   console.log(form)
 
   useEffect(() => {
@@ -195,6 +192,7 @@ function BookingForm({ form, setForm }) {
           <button
             type="submit"
             value="Make Reservation"
+            disabled={!isInValidForm}
           >
             Make Reservation
           </button>

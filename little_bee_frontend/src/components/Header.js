@@ -1,5 +1,5 @@
-import { lemonWord } from "../images";
-import headerStyles from "../styles/header.css";
+import { littleBee } from "../images";
+import "../styles/header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,10 +8,11 @@ function Nav() {
     <nav className="navlinks">
       <div className="images">
       <img
-        alt="little-Lemon"
+        alt="little Bee"
         className="app-logo"
-        width="150"
-        src={lemonWord}
+        width="90"
+        height="40"
+        src={littleBee}
       />
       <div className="bar"><FontAwesomeIcon icon={ faBars } /></div>
       </div>

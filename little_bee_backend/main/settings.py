@@ -2,7 +2,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&25=i@xrs^1pp0(+ji+gzlpextsu@kzfght+25t@s8f-mr4)t!'
 DEBUG = True
-ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -15,10 +14,10 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -26,9 +25,11 @@ MIDDLEWARE = [
     
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS= ["http://localhost:3000"]
-# CORS_ORIGIN_WHITELIST=[]
+ALLOWED_HOSTS = ["localhost:3000",'localhost:8000','localhost']
+CSRF_TRUSTED_ORINGINS = ["http://localhost:3000","http://localhost:8000"]
 
 ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
