@@ -41,9 +41,9 @@ form{
 
 #btn-div input[type="submit"]{
     position: absolute;
-    left: -8rem;
+    left: -22rem;
     bottom: -10rem;
-    width: 15rem;
+    width: 10rem;
     height: 3.5rem;
     border-radius: 1rem;
     padding-bottom: 3.6rem;
@@ -57,10 +57,20 @@ form{
 }
 
 
-@media screen and (max-width: 766px){
-    form{
-        display: grid;
+@media screen and (max-width: 768px){
+    .order{
+        /* display:grid;
         grid-template-columns: 1fr;
+        background-color:red; */
+
+    }
+
+    form{
+        display:flex;
+        flex-direction: column;
+
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
     }
     
     #btn-div input[type="submit"]{

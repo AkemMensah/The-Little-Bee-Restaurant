@@ -8,7 +8,7 @@ function Nav() {
   const navigate = useNavigate();
 
   const handleOrders = () => {
-    navigate("/orders-form")
+    navigate("/order-form")
   }
 
   return (
@@ -18,7 +18,7 @@ function Nav() {
         alt="little Bee"
         className="app-logo"
         width="90"
-        height="40"
+        height="60"
         src={littleBee}
       />
       <div className="bar"><FontAwesomeIcon icon={ faBars } /></div>

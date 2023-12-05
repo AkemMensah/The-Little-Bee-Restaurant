@@ -7,10 +7,12 @@ function fetchAPI(date) {
   return ["00:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00"];
 }
 
+// const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+
 function submitAPI(form) {
 fetch("http://localhost:8000/reservation/", {
   method: "POST",
-  headers: { "Content-Type": "application/json" },
+  headers: { "Content-Type": "application/json", },
   body: JSON.stringify(form),
 })
   .then((response) => {
