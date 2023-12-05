@@ -1,4 +1,4 @@
-import { lemon } from "../images";
+import { Bee } from "../images";
 import footerStyles from "../styles/footer.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,14 +12,14 @@ function Info() {
   return (
     <div className="footer">
       <div className="fLogo">
-        <img width="150" src={ lemon } alt="lemon" />
-        <a href="littlelemon@gmail.com">Email Us</a>
+        <img width="150" src={ Bee } alt="Bee" />
+        <a href="littlebee@gmail.com">Email Us</a>
       </div>
       <div className="contact">
         <p>Address:</p>
-        <p>Little Lemon Restaurant</p>
+        <p>Little Bee Restaurant</p>
         <p>P.O.Box C348</p>
-        <p>Chicago, USA Lemon street</p>
+        <p>Accra, Ghana, Lemon street</p>
         <p>Tel: +623-456-7890</p>
       </div>
 

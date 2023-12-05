@@ -158,7 +158,7 @@ function BookingForm({ form, setForm }) {
               min="1"
               max="10"
               placeholder={placeholders.guests}
-              onChange={(e) => setForm({ ...form, guests: e.target.value })}
+              onChange={(e) => setForm({ ...form, no_of_guests: e.target.value })}
             ></input>
           </div>
           <div className="form-item" id="occasion" >
@@ -193,6 +193,7 @@ function BookingForm({ form, setForm }) {
             type="submit"
             value="Make Reservation"
             disabled={!isInValidForm}
+            className="booking-btn"
           >
             Make Reservation
           </button>

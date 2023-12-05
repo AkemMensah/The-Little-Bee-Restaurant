@@ -2,8 +2,15 @@ import { littleBee } from "../images";
 import "../styles/header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from 'react-router-dom'
 
 function Nav() {
+  const navigate = useNavigate();
+
+  const handleOrders = () => {
+    navigate("/orders-form")
+  }
+
   return (
     <nav className="navlinks">
       <div className="images">
@@ -20,20 +27,20 @@ function Nav() {
       <button>Search</button>
 
       <ul>
-        <li>
-          <a href="/">Home</a>
+        <li onClick={handleOrders}>
+          Home
+        </li>
+        <li onClick={handleOrders}>
+          About
+        </li>
+        <li onClick={handleOrders}>
+          Menu
+        </li>
+        <li onClick={handleOrders}>
+          OrderOnline
         </li>
         <li>
-          <a href="./about.html">About</a>
-        </li>
-        <li>
-          <a href="./menu.html">Menu</a>
-        </li>
-        <li>
-          <a href="./orders.html">OrderOnline</a>
-        </li>
-        <li>
-          <a href="./login.html">Login</a>
+          Login
         </li>
       </ul>
     </nav>
@@ -43,7 +50,7 @@ function Nav() {
 function Heading() {
   return (
     <div className="app-header">
-      <p style={{ color: "green" }}>Welcome to Little Lemon Restaurant!</p>
+      <p style={{ color: "green" }}>Welcome to Little Bee Restaurant!</p>
       <Nav />
     </div>
   );

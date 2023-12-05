@@ -64,18 +64,19 @@
     width: 50%;
     list-style: none;
     margin-right: 10px;
+    background-color: red;
   }
 
-  .navlinks ul li a{
+  .navlinks ul li{
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 1rem;
-    padding: 10%;
+    /* padding: 10%; */
   }
 
-  .navlinks ul li a:hover{
+  .navlinks ul li:hover{
     color: #123910c0;
     background-color: rgb(136, 247, 136);
   }
@@ -91,19 +92,14 @@
   .navlinks button{
     border-radius: 0 1rem 1rem 0;
     border: solid 0.3rem #000b072c;
-    /* padding: 0.5rem; */
-    /* font-size:19px; */
-    /* margin-bottom: 1rem; */
-    /* margin-left: -5rem; */
     color: black;
-    /* font-weight: 900; */
     position:absolute;
     width: 8rem;
     height: 3rem;
     top:0;
-    /* right: 0rem; */
     left:37%;
-    /* background-color: white; */
+    padding:0;
+    background-color: white;
   }
   .navlinks button:hover{
     background-color: #123910c0;

@@ -43,6 +43,7 @@
     width: 8rem;
     font: 1.5rem bold sans-serif;
     border-radius: 1rem;
+    margin:0 0 0 68%;
 }
 
 @media screen and (max-width: 768px){

@@ -7,8 +7,15 @@ import ordersStyle from "../styles/orders.css";
 import highlightsStyle from "../styles/highlights.css";
 import testimonialsStyle from "../styles/testimonials.css";
 import aboutStyle from "../styles/about.css";
+import { useNavigate } from "react-router-dom";
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleBooking = () => {
+    navigate("/booking-form")
+  }
+
   return (
     <div className="hero">
       <div className="text-image">
@@ -24,8 +31,7 @@ function HeroSection() {
             lorem ipsum dolor sit amet, consectetur adipiscing elit. nunc, quis
             ultricies nisl nisl quis nisl. Sed euismod, nisl quis ultricies
             ultricies, nunc nisl ultricies nunc, quis ultricies nisl nisl quis
-            nisl. Sed euismod, nisl quis nisl nisl quis nisl. Sed euismod, nisl
-            quis ultricies. Sed euismod, nisl quis ultricies ultricies, nuncd...
+            nisl...
             <a href="/about.html">
               <button>Read More</button>
             </a>
@@ -34,8 +40,7 @@ function HeroSection() {
             lorem ipsum dolor sit amet, consectetur adipiscing elit. nunc, quis
             ultricies nisl nisl quis nisl. Sed euismod, nisl quis ultricies
             ultricies, nunc nisl ultricies nunc, quis ultricies nisl nisl quis
-            nisl. Sed euismod, nisl quis nisl nisl quis nisl. Sed euismod, nisl
-            lorem ipsum dolor sit amet...
+            nisl. Sed euismod, nisl quis nisl nisl quis nisl. ...
             <a href="/about.html">
               <button>Read More</button>
             </a>
@@ -45,9 +50,9 @@ function HeroSection() {
           <img alt="Hero dish" src={images.hero_cake} />
         </div>
       </div>
-      <a href="/booking-form">
-        <button className="tbtn">Reserve a Table</button>
-      </a>
+      {/* <a href="/booking-form"> */}
+        <button className="tbtn" onClick={handleBooking}>Reserve a Table</button>
+      {/* </a> */}
       <div className="search">
         <input type="search" placeholder="Search item..." />
         <button>Search</button>
@@ -61,19 +66,19 @@ function Orders() {
     <div className="orders">
       <h1> Order For Delivery</h1>
       <ul>
-        <a href="">
+        <a href="/">
           <li>Breakfast</li>
         </a>
-        <a href="">
+        <a href="/">
           <li>Lunch</li>
         </a>
-        <a href="">
+        <a href="/">
           <li>Brunch</li>
         </a>
-        <a href="">
+        <a href="/">
           <li>Dinner</li>
         </a>
-        <a href="">
+        <a href="/">
           <li>A La Carte</li>
         </a>
       </ul>
