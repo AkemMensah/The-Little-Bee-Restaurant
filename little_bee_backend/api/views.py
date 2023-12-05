@@ -4,6 +4,7 @@ from django.core.serializers import serialize
 import json
 from django.forms import model_to_dict
 from django.views.decorators.csrf import csrf_exempt
+
 from api.models import Menu
 from api.models import Reservation
 # from api.models import Customer
@@ -13,7 +14,7 @@ from api.models import Order
 def testview(request):
     return HttpResponse("<h1>Hello world</h1>")
 
-@ csrf_exempt
+@csrf_exempt
 def menuview(request):
     if request.method == "GET":
         menu_items= Menu.objects.all()
@@ -43,6 +44,7 @@ def menuview(request):
             return JsonResponse({"message":"Failed to delete menu"})
     return HttpResponse(request.method)
 
+@csrf_exempt
 def reservationview(request):
     if request.method == "GET":
         reserv_items = Reservation.objects.all()
@@ -72,7 +74,7 @@ def reservationview(request):
             return JsonResponse({"message":"Failed to delete Reservation"})
     return HttpResponse(request.method)
 
-
+@csrf_exempt
 def ordersview(request):
     if request.method == "GET":
         order_items = Order.objects.all()
