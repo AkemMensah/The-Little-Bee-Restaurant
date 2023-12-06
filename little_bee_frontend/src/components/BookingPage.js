@@ -3,31 +3,28 @@ import "../styles/booking.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function fetchAPI(date) {
+function fetchAPI(date)
+{
   return ["00:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00"];
 }
 
-// const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
-
-function submitAPI(form) {
-fetch("http://localhost:8000/reservation/", {
-  method: "POST",
-  headers: { "Content-Type": "application/json", },
-  body: JSON.stringify(form),
-})
-  .then((response) => {
-    if (!response.ok) {
-      return false;
-    } else {
-      return true;
-    }
+async function submitAPI(form)
+{
+  const response = await fetch("http://localhost:8000/reservation/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", },
+    body: JSON.stringify(form),
   })
-  .catch((error) => {
-    return false;
-  });
+
+  if (response.ok)
+  {
+   const data = await response.json
+  }
+  return false;
 }
 
-function BookingForm({ form, setForm }) {
+function BookingForm({ form, setForm })
+{
   const [availabilities, setAvailabilities] = useState([]);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
@@ -43,12 +40,14 @@ function BookingForm({ form, setForm }) {
     email: "Enter email",
   };
 
-  const isValidEmail = () => {
+  const isValidEmail = () =>
+  {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(form.email);
   };
 
-  const isInValidForm = () => {
+  const isInValidForm = () =>
+  {
     return (
       form.name !== "" &&
       form.name.length > 3 &&
@@ -59,29 +58,34 @@ function BookingForm({ form, setForm }) {
       form.occasion !== "" &&
       form.special !== "" &&
       isValidEmail()
-    ) 
+    )
   };
   console.log(isInValidForm)
   console.log(form)
 
-  useEffect(() => {
-    if (success == true) {
+  useEffect(() =>
+  {
+    console.log("This is ", success)
+    if (success == true)
+    {
       navigate("/confirm-booking");
     }
   }, [success]);
 
 
-  function submitForm(e) {
+  function submitForm(e)
+  {
     e.preventDefault();
     setSuccess(submitAPI(form));
-
   }
 
-  function checkAvailabilities(date) {
+  function checkAvailabilities(date)
+  {
     setAvailabilities(fetchAPI(date));
   }
 
-  function handleDateChange(e) {
+  function handleDateChange(e)
+  {
     e.preventDefault();
     setForm({ ...form, date: e.target.value });
     checkAvailabilities(e.target.value);
@@ -90,95 +94,95 @@ function BookingForm({ form, setForm }) {
     <div className="booking">
       <h1>My Reservation</h1>
       <form onSubmit={submitForm}>
-          <div className="form-item">
-            <label htmlFor="customer_name">Name:</label>
-            <input
+        <div className="form-item">
+          <label htmlFor="customer_name">Name:</label>
+          <input
             className="norm"
-              htmlFor="customer_name"
-              type="text"
-              placeholder={placeholders.customer_name}
-              id="customer_name"
-              required
-              onChange={(e) => setForm({ ...form, customer_name: e.target.value })}
-            ></input>
-          </div>
-          <div className="form-item">
-            <label htmlFor="phone">Phone:</label>
-            <input
+            htmlFor="customer_name"
+            type="text"
+            placeholder={placeholders.customer_name}
+            id="customer_name"
+            required
+            onChange={(e) => setForm({ ...form, customer_name: e.target.value })}
+          ></input>
+        </div>
+        <div className="form-item">
+          <label htmlFor="phone">Phone:</label>
+          <input
             className="norm"
-              htmlFor="phone"
-              type="tel"
-              placeholder={placeholders.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              id="phone"
-              required
-            ></input>
-          </div>
-          <div className="form-item">
-            <label htmlFor="email">Email:</label>
-            <input
+            htmlFor="phone"
+            type="tel"
+            placeholder={placeholders.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            id="phone"
+            required
+          ></input>
+        </div>
+        <div className="form-item">
+          <label htmlFor="email">Email:</label>
+          <input
             className="norm"
-              htmlFor="email"
-              type="email"
-              id="email"
-              placeholder={placeholders.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-            ></input>
-          </div>
-          <div className="form-item">
-            <label htmlFor="res-date">Choose date:</label>
-            <input
+            htmlFor="email"
+            type="email"
+            id="email"
+            placeholder={placeholders.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+          ></input>
+        </div>
+        <div className="form-item">
+          <label htmlFor="res-date">Choose date:</label>
+          <input
             className="select"
-              type="date"
-              id="res-date"
-              name="res-date"
-              min="2021-07-22"
-              max="2025-12-31"
-              onChange={handleDateChange}
-            ></input>
-          </div>
-          <div className="form-item">
-            <label htmlFor="res-time">Choose time:</label>
-            <select
-              id="res-time"
-              name="res-time"
-              
-              onChange={(e) => setForm({ ...form, time: e.target.value })}
-            >
-              {availabilities.map((time) => (
-                <option value={time}>{time}</option>
-              ))}
-            </select>
-          </div>
-          <div className="form-item">
-            <label htmlFor="guests">Number of guests:</label>
-            <input
+            type="date"
+            id="res-date"
+            name="res-date"
+            min="2021-07-22"
+            max="2025-12-31"
+            onChange={handleDateChange}
+          ></input>
+        </div>
+        <div className="form-item">
+          <label htmlFor="res-time">Choose time:</label>
+          <select
+            id="res-time"
+            name="res-time"
+
+            onChange={(e) => setForm({ ...form, time: e.target.value })}
+          >
+            {availabilities.map((time) => (
+              <option value={time}>{time}</option>
+            ))}
+          </select>
+        </div>
+        <div className="form-item">
+          <label htmlFor="guests">Number of guests:</label>
+          <input
             className="norm"
-              type="number"
-              id="guests"
-              name="guests"
-              min="1"
-              max="10"
-              placeholder={placeholders.guests}
-              onChange={(e) => setForm({ ...form, no_of_guests: e.target.value })}
-            ></input>
-          </div>
-          <div className="form-item" id="occasion" >
-            <label htmlFor="occasion">Occasion:</label>
-            <select
-              id="occasion"
-              name="occasion"
-              placeholder={placeholders.occasion}
-              className="select"
-              onChange={(e) => setForm({ ...form, occasion: e.target.value })}
-            >
-              <option value="birthday">Birthday</option>
-              <option value="anniversary">Anniversary</option>
-              <option value="business">Business</option>
-              <option value="other">Other</option>
-              {form.occasion}
-            </select>
-          </div>
+            type="number"
+            id="guests"
+            name="guests"
+            min="1"
+            max="10"
+            placeholder={placeholders.guests}
+            onChange={(e) => setForm({ ...form, no_of_guests: e.target.value })}
+          ></input>
+        </div>
+        <div className="form-item" id="occasion" >
+          <label htmlFor="occasion">Occasion:</label>
+          <select
+            id="occasion"
+            name="occasion"
+            placeholder={placeholders.occasion}
+            className="select"
+            onChange={(e) => setForm({ ...form, occasion: e.target.value })}
+          >
+            <option value="birthday">Birthday</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="business">Business</option>
+            <option value="other">Other</option>
+            {form.occasion}
+          </select>
+        </div>
         {/* </div> */}
         <div className="form-other">
           <div className="form-text">
@@ -190,22 +194,23 @@ function BookingForm({ form, setForm }) {
               onChange={(e) => setForm({ ...form, special: e.target.value })}
             ></textarea>
           </div>
-          </div>
-          <button
-            type="submit"
-            value="Make Reservation"
-            disabled={!isInValidForm}
-            className="booking-btn"
-          >
-            Make Reservation
-          </button>
-        
+        </div>
+        <button
+          type="submit"
+          value="Make Reservation"
+          disabled={!isInValidForm}
+          className="booking-btn"
+        >
+          Make Reservation
+        </button>
+
       </form>
     </div>
   );
 }
 
-function BookingPage() {
+function BookingPage()
+{
   const [form, setForm] = useState({
     customer_name: "",
     phone: "",
