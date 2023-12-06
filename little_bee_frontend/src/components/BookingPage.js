@@ -18,7 +18,8 @@ async function submitAPI(form)
 
   if (response.ok)
   {
-   const data = await response.json
+   const data = await response.json()
+   return true;
   }
   return false;
 }
@@ -73,10 +74,10 @@ function BookingForm({ form, setForm })
   }, [success]);
 
 
-  function submitForm(e)
+  async function submitForm(e)
   {
     e.preventDefault();
-    setSuccess(submitAPI(form));
+    setSuccess(await submitAPI(form));
   }
 
   function checkAvailabilities(date)
@@ -93,7 +94,7 @@ function BookingForm({ form, setForm })
   return (
     <div className="booking">
       <h1>My Reservation</h1>
-      <form onSubmit={submitForm}>
+      <form onSubmit={async (e)=>await submitForm(e)}>
         <div className="form-item">
           <label htmlFor="customer_name">Name:</label>
           <input

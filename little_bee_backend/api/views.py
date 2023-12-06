@@ -4,14 +4,18 @@ from django.core.serializers import serialize
 import json
 from django.forms import model_to_dict
 from django.views.decorators.csrf import csrf_exempt
-
 from api.models import Menu
 from api.models import Reservation
 # from api.models import Customer
 from api.models import Order
 
+
+
+
 # Create your views here.
-def testview(request):
+
+
+def homeview(request):
     return HttpResponse("<h1>Hello world</h1>")
 
 @csrf_exempt
