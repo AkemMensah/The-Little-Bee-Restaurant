@@ -1,11 +1,11 @@
 
 from django.contrib import admin
 from django.urls import path
-from api.views import testview, menuview, reservationview,ordersview
+from api.views import homeview, menuview, reservationview,ordersview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', testview),
+    path('', homeview),
     path("menu/", menuview),
     path("reservation/", reservationview),
     path("order/", ordersview)

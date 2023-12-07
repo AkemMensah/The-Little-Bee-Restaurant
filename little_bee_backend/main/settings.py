@@ -3,6 +3,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&25=i@xrs^1pp0(+ji+gzlpextsu@kzfght+25t@s8f-mr4)t!'
 DEBUG = True
 
+APPEND_SLASH = True
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -29,8 +31,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS= ["http://localhost:3000"]
 ALLOWED_HOSTS = ["localhost:3000",'localhost:8000','localhost','127.0.0.1']
-CSRF_TRUSTED_ORINGINS = ["localhost:3000",'localhost:8000','localhost']
-CSRF_USE_SESSIONS = False
+# CSRF_TRUSTED_ORINGINS = ["localhost:3000",'localhost:8000','localhost']
+# CSRF_USE_SESSIONS = False
 
 ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
