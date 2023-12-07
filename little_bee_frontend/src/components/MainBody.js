@@ -25,7 +25,12 @@ function HeroSection() {
           <p className="param1">
             The Little Bee restaurant app is a web app whose building will
              allow the builer to have a feel of getting a well functioning 
-             app up and running.
+             app up and running. lorem ipsum dolor sit amet, consectetur adipiscing elit. nunc, quis
+            ultricies nisl nisl quis nisl. Sed euismod, nisl quis ultricies
+            ultricies, nunc nisl ultricies nunc, quis ultricilorem ipsum dolor sit amet, consectetur adipiscing elit. nunc, quis
+            ultricies nisl nisl quis nisl. Sed euismod, nisl quis ultricies
+            ultricies, nunc nisl ultricies nunc, quis ultricilorem ipsum dolor sit amet, consectetur adipiscing elit. nunc, quis
+            ultricies...
             <a href="/about.html">
               <button>Read More</button>
             </a>

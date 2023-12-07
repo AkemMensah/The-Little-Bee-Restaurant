@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import LHeading from "./components/LandingPage";
+import LandingPage from "./components/LandingPage";
 import Heading from "./components/Header";
 import Main from "./components/MainBody";
 import Footer from "./components/Footer";
@@ -21,11 +21,20 @@ function HomePage() {
   );
 }
 
+function LandingPageElements(){
+  return(
+    <>
+    <LandingPage />
+    {/* <Footer /> */}
+    </>
+  )
+}
+
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LHeading />} />
+        <Route path="/" element={<LandingPageElements />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/order-form" element={<Orderform />} />
         <Route path="/booking-form" element={<BookingPage />} />

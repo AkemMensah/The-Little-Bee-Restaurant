@@ -14,12 +14,12 @@
     width: auto;
     height: 3rem
 }
-.links{
+.llinks{
     display: flex;
     flex-direction: row;
 }
 
-.links li{
+.llinks li{
     list-style: none;
     padding: 1rem;
     margin: 0 0.5rem;
@@ -31,8 +31,8 @@
     border: 0.2rem solid wheat;
 
 }
-.links li:hover{
-    background-color: transparent;
+.llinks li:hover{
+    blackground-color: transparent;
     cursor: pointer;
     color: wheat;
 }
@@ -51,4 +51,51 @@
     background-size: cover;
     background-color: black;
     
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 0rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.body div{
+    width: 90%;
+    height: 30rem;
+    background-color: lightgray; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+
+}
+
+.body div img{
+    width: 70%;
+    height: 80%;
+}
+
+.about{
+    background-color:lightblue;
+    /* margin-top: 100rem; */
+    margin:0 0 20rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+    align-items: center;
+
+}
+
+.about .text{
+    margin:0 0 20rem 0;
+    background-color:green ;
+    width:60%;
+}
+.about video{
+    width: 30%;
+    height:auto;
 }
