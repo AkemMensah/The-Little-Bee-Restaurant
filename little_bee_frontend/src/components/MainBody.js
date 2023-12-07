@@ -23,15 +23,9 @@ function HeroSection() {
           <h1 style={{ color: "#F4CE14" }}>Little Bee</h1>
           <h3>GHANA</h3>
           <p className="param1">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. nunc, quis
-            ultricies nisl nisl quis nisl. Sed euismod, nisl quis ultricies
-            ultricies, nunc nisl ultricies nunc, quis ultricies nisl nisl quis
-            nisl. Sed euismod, nisl quis nisl nisl quis nisl. Sed euismod, nisl
-            quis ultricies. Sed euismod, nisl quis ultricies ultricies, nunc
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. nunc, quis
-            ultricies nisl nisl quis nisl. Sed euismod, nisl quis ultricies
-            ultricies, nunc nisl ultricies nunc, quis ultricies nisl nisl quis
-            nisl...
+            The Little Bee restaurant app is a web app whose building will
+             allow the builer to have a feel of getting a well functioning 
+             app up and running.
             <a href="/about.html">
               <button>Read More</button>
             </a>

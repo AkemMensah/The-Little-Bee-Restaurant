@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import LHeading from "./components/LandingPage";
 import Heading from "./components/Header";
 import Main from "./components/MainBody";
 import Footer from "./components/Footer";
@@ -24,7 +25,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LHeading />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/order-form" element={<Orderform />} />
         <Route path="/booking-form" element={<BookingPage />} />
         <Route path="/confirm-booking" element={<ConfirmBooking />} />

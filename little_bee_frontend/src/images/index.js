@@ -12,5 +12,6 @@ import lemon from './lemon.jpg'
 import vegetables from './vegetables.jpg'
 import orderPack from './orderPack.jpg'
 import littleBee from './little_Bee.jpg';
+import restaurantBanner from './Restaurant-interior.jpg';
 import Bee from './Bee.jpg'
-export {greek, hero_cake,lemonWord,lemon_fish,tomato_cake,vegetables,matheus,michael,joseph,christina,couples,lemon,littleBee,Bee}
+export {greek, hero_cake,lemonWord,lemon_fish,tomato_cake,vegetables,matheus,michael,joseph,christina,couples,lemon,littleBee,Bee,restaurantBanner}
