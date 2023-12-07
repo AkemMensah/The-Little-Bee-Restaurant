@@ -1,3 +1,4 @@
+from multiprocessing.forkserver import read_signed
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.core.serializers import serialize
@@ -8,6 +9,7 @@ from api.models import Menu
 from api.models import Reservation
 # from api.models import Customer
 from api.models import Order
+from pprint import pprint
 
 
 
@@ -52,13 +54,22 @@ def menuview(request):
 def reservationview(request):
     if request.method == "GET":
         reserv_items = Reservation.objects.all()
-        data = serialize("json", reserv_items)
+        # data = serialize("json", reserv_items)
+        data = [model_to_dict(item) for item in reserv_items]
+        
         return JsonResponse(data, safe=False)
     if request.method == "POST":
         try:
             body = request.body.decode("utf-8")
             data = json.loads(body)
-            Reservation(**data).save()
+            print("\nRAW DATA: \n")
+            pprint(data)
+            reservation = Reservation(**data)
+            reservation.save()
+            reservation.refresh_from_db()
+            print("\nDATABASE COPY: \n\n")
+            pprint(model_to_dict(reservation))
+
             return JsonResponse({"message":"Reservation saved successfully"})
         except Exception as e:
             print(e)
