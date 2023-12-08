@@ -1,5 +1,6 @@
 import orderPack from "../images/orderPack.jpg";
 import "../styles/confirmOrder.css";
+import React from "react";
 
 function ConfirmOrder() {
   return (

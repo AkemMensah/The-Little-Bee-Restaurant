@@ -1,25 +1,29 @@
-.navigate{
-    display:flex;
+/* #landing-page-container {
+    margin: 0, 5%;
+} */
+
+.navigate {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: black;
 }
 
-.logo{
-    display:flex;
+.logo {
+    display: flex;
     flex-direction: row;
     color: wheat;
 }
-.logo img{
+.logo img {
     width: auto;
-    height: 3rem
+    height: 3rem;
 }
-.llinks{
+.llinks {
     display: flex;
     flex-direction: row;
 }
 
-.llinks li{
+.llinks li {
     list-style: none;
     padding: 1rem;
     margin: 0 0.5rem;
@@ -29,31 +33,42 @@
     font-weight: bolder;
     color: white;
     border: 0.2rem solid wheat;
-
 }
-.llinks li:hover{
-    blackground-color: transparent;
+.llinks li:hover {
+    background-color: transparent;
     cursor: pointer;
     color: wheat;
 }
-.intro{
+.intro {
     margin-top: 5rem;
-    /* background-color: red; */
+    background-color: #00000078;
     text-align: center;
-    color: white;
+    color: wheat;
     font: 1.5rem solid bold;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
 }
 
-.lheading{
+.intro-text {
+    opacity: 1;
+    width: 80%;
+}
+.intro-text p {
+    font-size: 1.9rem;
+}
+
+.lheading {
     width: 100%;
     height: 35rem;
-    background-image: url('../images/banner.png');
+    background-image: url("../images/banner.png");
     background-size: cover;
     background-color: black;
-    
 }
 
-.body{
+.body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 0rem;
@@ -62,36 +77,42 @@
     margin: 2rem 0 1rem 0;
 }
 
-.body div{
-    width: 90%;
+.body div {
+    width: 95%;
     height: 30rem;
-    background-color: lightgray; 
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 0.5rem;
-
+    margin: 2%;
+}
+.body div p {
+    margin: 3%;
 }
 
-.body div img{
+.body div img {
     width: 70%;
     height: 80%;
 }
 
-.labout{
-    background-color:lightblue;
-    /* margin-top: 100rem; */
-    margin:0 0 2rem 0;
+.about {
+    background-color: lightblue;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:2rem;
     align-items: center;
-
+}
+.text1 {
+    margin: 2rem;
 }
 
-.labout .text{
-    /* margin:0 0 5rem 0; */
+.about .text{
+    margin:0 0 20rem 0;
     background-color:green ;
     width:60%;
+}
+.about video{
+    width: 30%;
+    height:auto;
 }

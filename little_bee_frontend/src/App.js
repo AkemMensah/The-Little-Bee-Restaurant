@@ -9,41 +9,41 @@ import Orderform from "./components/MenuOrderPage";
 import ConfirmBooking from "./components/ConfirmBookingPage";
 import ConfirmOrder from "./components/ConfirmOrderPage";
 import AddMenuPage from "./components/AddMenuPage";
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import React from "react";
 
 function HomePage() {
-  return (
-    <>
-    <Heading />
-    <Main />
-    <Footer />
-    </>
-  );
+    return (
+        <>
+            <Heading />
+            <Main />
+            <Footer />
+        </>
+    );
 }
 
-function LandingPageElements(){
-  return(
-    <>
-    <LandingPage />
-    {/* <Footer /> */}
-    </>
-  )
+function LandingPageElements() {
+    return (
+        <>
+            <LandingPage />
+        </>
+    );
 }
 
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<LandingPageElements />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/order-form" element={<Orderform />} />
-        <Route path="/booking-form" element={<BookingPage />} />
-        <Route path="/confirm-booking" element={<ConfirmBooking />} />
-        <Route path="/confirm-order" element={<ConfirmOrder />} />
-        <Route path="/add-menu" element={<AddMenuPage />}/>
-      </Routes>
-    </>
-  );
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<LandingPageElements />} />
+                <Route path="/home" element={<HomePage />} />
+                <Route path="/order-form" element={<Orderform />} />
+                <Route path="/booking-form" element={<BookingPage />} />
+                <Route path="/confirm-booking" element={<ConfirmBooking />} />
+                <Route path="/confirm-order" element={<ConfirmOrder />} />
+                <Route path="/add-menu" element={<AddMenuPage />} />
+            </Routes>
+        </>
+    );
 }
 
 export default App;

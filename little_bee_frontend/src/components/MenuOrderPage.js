@@ -1,5 +1,5 @@
 import "../styles/menuOrder.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 async function submitAPI(form) {
@@ -9,7 +9,7 @@ async function submitAPI(form) {
         body: JSON.stringify(form),
     });
     if (response.ok) {
-        const data = await response.json();
+        // const data = await response.json();
         return true;
     }
     return false;

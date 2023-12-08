@@ -1,5 +1,6 @@
 import table from "../images/CTA.png";
 import "../styles/confirmBooking.css";
+import React from "react";
 
 function ConfirmBooking() {
   return (

@@ -1,12 +1,12 @@
-.about{
+.about {
     margin-top: 2rem;
-    margin-bottom: -19rem;
+    /* margin-bottom: -19rem; */
 }
-.about h1{
+.about h1 {
     font-size: 2rem;
     margin: 0 0 0 1rem;
 }
-.about-content{
+.about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -14,7 +14,7 @@
     margin-left: 1rem;
 }
 
-.about .about-text{
+.about .about-text {
     display: flex;
     flex-direction: column;
     height: 50%;
@@ -22,71 +22,68 @@
     background-color: rgb(84, 98, 60);
     font-size: 1rem;
 }
-.about .about-text button{
+.about .about-text button {
     height: 3rem;
     width: 10rem;
     font: 1.5rem bold sans-serif;
     border-radius: 1rem;
-   
 }
 
-.about .about-image{
+.about .about-image {
     height: 40%;
     border-radius: 2rem;
     background-color: rgb(84, 98, 60);
 }
-.about .about-image img{
+.about .about-image img {
     width: 100%;
     height: 100%;
     border-radius: 2rem;
 }
-.about .about-image p{
+.about .about-image p {
     font-size: 1.5rem;
     margin: 0.5rem 0 0.5rem 0;
     background-color: darkgrey;
     padding: 0.8rem;
     border-radius: 0.5rem;
     text-align: center;
-    
 }
 
-.about .about-text h1{
+.about .about-text h1 {
     font-size: 2.5rem;
     margin: 0 0 0 0.5rem;
 }
 
-.about .about-text p{
+.about .about-text p {
     font-size: 1.2rem;
-    margin:0 0 1rem 0.5rem;
+    margin: 0 0 1rem 0.5rem;
     font: 1.5rem bold sans-serif;
 }
-.about .about-text button{
+.about .about-text button {
     font-size: 1.5rem;
-    margin:0 0 55% 70%;
+    margin: 0 0 55% 70%;
     padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
 
-@media screen and (max-width : 768px){
-    .about{
+@media screen and (max-width: 768px) {
+    .about {
         background-color: rgb(204, 227, 248);
-        border-radius:0.5rem 0.5rem 0 0;
+        border-radius: 0.5rem 0.5rem 0 0;
     }
-    .about-text{
-        overflow:hidden;
-        position:relative;
-
+    .about-text {
+        overflow: hidden;
+        position: relative;
     }
-    .about .about-text button{
-        position:absolute;
-        bottom:-5%;
-        right:0;
+    .about .about-text button {
+        position: absolute;
+        bottom: -5%;
+        right: 0;
         padding: -10rem;
     }
-    .about .about-text button:hover{
+    .about .about-text button:hover {
         background-color: rgb(153, 210, 55);
         color: white;
     }
-    .about .about-image p{
-        background-color:transparent;
+    .about .about-image p {
+        background-color: transparent;
     }
 }

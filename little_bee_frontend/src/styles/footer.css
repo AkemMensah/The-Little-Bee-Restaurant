@@ -1,4 +1,4 @@
-.footer{
+footer {
     margin-top: 0;
     margin-left: 1rem;
     min-height: 40vh;
@@ -6,169 +6,154 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color:cadetblue;
+    /* background-color: cadetblue; */
     border-radius: 0.5rem;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 @keyframes fLogo-spin {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes fast-fLogo-spin {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
-.fLogo{
+.fLogo {
     margin-top: 3rem;
     width: 20%;
     height: 40%;
-    border-radius: 1rem;
     margin-left: 1.5rem;
     margin-right: 0;
     padding: 0;
     /* background-color: #123910c0; */
     position: relative;
 }
-  
-.fLogo img{
+
+.fLogo img {
     width: 70%;
     height: 40%;
-    border-radius: 1rem;
-    color:green;
-    background-color: green;
+    border-radius: 50%;
+    /* color: green; */
+    /* background-color: green; */
     animation: fLogo-spin infinite 20s linear;
 }
-.fLogo img:hover{
+.fLogo img:hover {
     animation: fast-fLogo-spin infinite 1s linear;
 }
 
-.fLogo a{
+.fLogo a {
     text-decoration: none;
-    color: blue;
+    /* color: blue; */
     font: 1.5rem bold sans-serif;
     padding: 0 rem 0 0.2rem;
     position: absolute;
     bottom: -3rem;
     right: 7rem;
-    /* background-color: rgb(243, 246, 43); */
-    border-radius: 0.5rem;
+    background-color: rgb(243, 246, 43);
 }
 
-.fLogo a:hover{
+.fLogo a:hover {
     color: white;
     background-color: #123910c0;
 }
 
-.contact{
-    /* background-color: #123910c0; */
-    font: 1.5rem bold sans-serif;
+.contact {
 }
 
-
-.links ul{
+.links ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-
 }
-.links p{
-    font: 1.5rem bold sans-serif;
+.links p {
     margin: 0.5rem 0 0.5rem 0;
-
 }
-.links ul li{
-    font:1.6rem bold sans-serif;
+.links ul li {
     padding: 0.6rem;
     padding: 0.2rem;
 }
 
-.links ul li a{
+.links ul li a {
     text-decoration: none;
-    color: blue;
-    font: 1.5rem bold sans-serif;
+    /* color: blue; */
 }
 
-.links ul li a:hover{
+.links ul li a:hover {
     color: white;
 }
 
-.social{
+.social {
     display: flex;
     flex-direction: column;
 }
-.social p{
-    font: 1.5rem bold sans-serif;
+.social p {
     margin: 0.5rem 0 0.5rem 0;
-
 }
 
-.social ul li{
+.social ul li {
     list-style: none;
-    font:1.6rem bold sans-serif;
     padding: 0.6rem;
     /* background-color: blue; */
 }
-.social ul li a{
+.social ul li a {
     text-decoration: none;
-    color: blue;
-    /* background-color: blue; */
-    font: 1.5rem bold sans-serif;
 }
 
-@media screen and (max-width:768px){
-    .footer{
+@media screen and (max-width: 768px) {
+    .footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        border-top:1rem solid white;
+        border-top: 1rem solid white;
     }
-    .fLogo{
+    .fLogo {
         width: 70%;
         height: 50%;
         margin: 3rem 0 0 3rem;
         padding: 0;
     }
-    .fLogo img{
+    .fLogo img {
         width: 80%;
         margin-bottom: 0;
         padding-bottom: 0;
         height: 100%;
     }
-    .links{
-        border-top:0.2rem solid black;
+    .links {
+        border-top: 0.2rem solid black;
     }
-    .social{
-        border-top:0.3rem solid black;
+    .social {
+        border-top: 0.3rem solid black;
     }
-    .links ul{
-        display:grid;
+    .links ul {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         font-size: 0.2rem;
         padding: 0;
         margin: 0 0 0 0.2rem;
     }
-    .links ul li{
+    .links ul li {
         font-size: 0.2rem;
         padding: 0;
-        margin: 0.;
-        /* background-color: blueviolet; */
+        margin: 0;
+        background-color: blueviolet;
     }
-    .social p{
+    .social p {
         font-size: 1.5rem;
         margin-left: 2rem;
     }
-    .social ul{
+    .social ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         font-size: 0rem;
     }
-
 }

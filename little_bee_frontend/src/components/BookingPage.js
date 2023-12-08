@@ -1,6 +1,5 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/booking.css";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function fetchAPI(date)
@@ -16,12 +15,11 @@ async function submitAPI(form)
     body: JSON.stringify(form),
   });
 
-  if (response.ok)
-  {
-    const data = await response.json();
-    return true;
-  }
-  return false;
+    if (response.ok) {
+        // const data = await response.json();
+        return true;
+    }
+    return false;
 }
 
 function BookingForm({ form, setForm })
