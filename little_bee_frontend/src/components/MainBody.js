@@ -1,5 +1,5 @@
 import data from "../StaticData/data";
-
+import React from "react";
 import * as images from "../images/index";
 import couples from "../images/couples.png";
 import heroStyle from "../styles/hero.css";

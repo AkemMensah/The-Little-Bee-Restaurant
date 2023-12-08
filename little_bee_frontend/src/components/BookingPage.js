@@ -1,6 +1,5 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/booking.css";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function fetchAPI(date) {
@@ -15,7 +14,7 @@ async function submitAPI(form) {
     });
 
     if (response.ok) {
-        const data = await response.json();
+        // const data = await response.json();
         return true;
     }
     return false;
