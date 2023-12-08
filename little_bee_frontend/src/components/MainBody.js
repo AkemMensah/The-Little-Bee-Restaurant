@@ -49,9 +49,7 @@ function HeroSection() {
           <img alt="Hero dish" src={images.hero_cake} />
         </div>
       </div>
-      {/* <a href="/booking-form"> */}
         <button className="tbtn" onClick={handleBooking}>Reserve a Table</button>
-      {/* </a> */}
       <div className="search">
         <input type="search" placeholder="Search item..." />
         <button>Search</button>

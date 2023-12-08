@@ -107,23 +107,12 @@
     margin: 2rem;
 }
 
-.about .text {
-    margin: 0 0 20rem 0;
-    background-color: green;
-    width: 60%;
+.about .text{
+    margin:0 0 20rem 0;
+    background-color:green ;
+    width:60%;
 }
-.about video {
+.about video{
     width: 30%;
-    height: auto;
-}
-
-.text2 {
-    text-align: justify;
-    line-height: 150%;
-}
-
-.connect li {
-    display: inline;
-    padding: 2px;
-    margin: 0 5px;
+    height:auto;
 }
