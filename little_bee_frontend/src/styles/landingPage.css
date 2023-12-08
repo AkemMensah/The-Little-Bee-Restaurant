@@ -21,6 +21,7 @@
 .llinks {
     display: flex;
     flex-direction: row;
+    columns: white;
 }
 
 .llinks li {
@@ -33,6 +34,10 @@
     font-weight: bolder;
     color: white;
     border: 0.2rem solid wheat;
+}
+.llinks li a {
+    color: white;
+    text-decoration: none;
 }
 .llinks li:hover {
     background-color: transparent;

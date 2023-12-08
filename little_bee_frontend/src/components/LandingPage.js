@@ -11,14 +11,12 @@ import "../styles/landingPage.css";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 
+function Nav() {
+    const navigate = useNavigate();
 
-
-function Nav(){
-    const navigate = useNavigate()
-
-    const handleClickHome = () =>{
-        navigate("/home")
-    }
+    const handleClickHome = () => {
+        navigate("/home");
+    };
     return (
         <nav className="navigate">
             <div className="logo">
@@ -32,9 +30,15 @@ function Nav(){
                 <h1>LITTLE BEE RESTAURANT</h1>
             </div>
             <ul className="llinks">
-                <li onClick={handleClickHome}>OrderOnline</li>
-                <li onClick={handleClickHome}>Reserve A Table</li>
-                <li onClick={handleClickHome}>HomePage</li>
+                <li>
+                    <a href="/order-form">Order Online</a>
+                </li>
+                <li>
+                    <a href="/booking-form">Reserve A Table</a>
+                </li>
+                <li>
+                    <a href="/home">Home Page</a>
+                </li>
             </ul>
         </nav>
     );
@@ -55,7 +59,7 @@ function Intro() {
     );
 }
 
-function LHeading(){
+function LHeading() {
     return (
         <div className="lheading">
             <Nav />
@@ -162,10 +166,11 @@ function LBody() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen
                     ></iframe>
-                    <video src={video}
-                    controls
-                    // width="900"
-                    // height="200"
+                    <video
+                        src={video}
+                        controls
+                        // width="900"
+                        // height="200"
                     />
                 </div>
             </div>
