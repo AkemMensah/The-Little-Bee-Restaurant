@@ -79,10 +79,10 @@
     height: 80%;
 }
 
-.about{
+.labout{
     background-color:lightblue;
     /* margin-top: 100rem; */
-    margin:0 0 20rem 0;
+    margin:0 0 2rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:2rem;
@@ -90,12 +90,8 @@
 
 }
 
-.about .text{
-    margin:0 0 20rem 0;
+.labout .text{
+    /* margin:0 0 5rem 0; */
     background-color:green ;
     width:60%;
-}
-.about video{
-    width: 30%;
-    height:auto;
 }

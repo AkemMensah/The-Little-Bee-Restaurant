@@ -21,7 +21,6 @@ import confirm1 from './Screenshot21.png';
 import confirm2 from './Screenshot23.png';
 
 
-
 export {greek, hero_cake,lemonWord,lemon_fish,tomato_cake,
     vegetables,matheus,michael,joseph,christina,couples,
     lemon,littleBee,Bee,restaurantBanner,homeshot,order,confirm1,confirm2,reserve}

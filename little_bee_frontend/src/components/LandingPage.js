@@ -2,11 +2,16 @@ import { littleBee } from "../images";
 import { reserve, homeshot, confirm1, confirm2, order } from "../images/index.js";
 import '../styles/landingPage.css';
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 
 
-function Nav()
-{
+function Nav(){
+    const navigate = useNavigate()
+
+    const handleClickHome = () =>{
+        navigate("/home")
+    }
     return (
         <nav className="navigate">
             <div className="logo">
@@ -19,9 +24,9 @@ function Nav()
                 <h1>LITTLE BEE RESTAURANT</h1>
             </div>
             <ul className="llinks">
-                <li>OrderOnline</li>
-                <li>Reserve A Table</li>
-                <li>HomePage</li>
+                <li onClick={handleClickHome}>OrderOnline</li>
+                <li onClick={handleClickHome}>Reserve A Table</li>
+                <li onClick={handleClickHome}>HomePage</li>
 
             </ul>
         </nav>
@@ -41,8 +46,7 @@ function Intro()
     )
 }
 
-function LHeading()
-{
+function LHeading(){
     return (
         <div className="lheading">
             <Nav />
@@ -91,7 +95,7 @@ function LBody()
                     </p>
                 </div>
             </div>
-            <div className="about">
+            <div className="labout">
                 <div className="text1">
                     <div className="text2">
                     <h1>The project's inspiration</h1>
@@ -116,7 +120,11 @@ function LBody()
                 </div>
                 <div className="video">
                     <h1> project video </h1>
-                    <video src=""/>
+                    <video src={video}
+                    controls
+                    // width="900"
+                    // height="200"
+                    />
                 </div>
             </div>
         </>
