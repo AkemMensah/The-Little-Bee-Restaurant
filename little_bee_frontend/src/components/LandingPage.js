@@ -10,6 +10,7 @@ import {
 import "../styles/landingPage.css";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import socialLinks from './Footer'
 
 
 
@@ -139,7 +140,7 @@ function LBody() {
                     <div className="connect">
                         <h1>Let's Conect on:</h1>
                         <ul>
-                            {socialLinks.map((item, index) => {
+                            {/* {socialLinks.map((item, index) => {
                                 return (
                                     <li key={index}>
                                         <a href={item.url} target="_blank">
@@ -147,7 +148,10 @@ function LBody() {
                                         </a>
                                     </li>
                                 );
-                            })}
+                            })} */}
+                            <li>Github</li>
+                            <li>LinkedIn</li>
+                            <li>Twiter</li>
                         </ul>
                     </div>
                 </div>
@@ -156,17 +160,17 @@ function LBody() {
                     <iframe
                         width="760"
                         height="500"
-                        src="https://www.youtube.com/embed/ZJGkt4VEAKI?si=uqH3TgGQFUsBXXYP"
+                        src="https://https://youtu.be/p7s10g6ioV8"
                         title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen
                     ></iframe>
-                    <video src={video}
-                    controls
-                    // width="900"
-                    // height="200"
-                    />
+                    {/* <video src={video} */}
+                    {/* controls */}
+                    {/* // width="900" */}
+                    {/* // height="200" */}
+                    {/* /> */}
                 </div>
             </div>
         </>
