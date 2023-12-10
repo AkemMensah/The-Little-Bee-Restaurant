@@ -17,7 +17,6 @@ function HomePage() {
         <>
             <Heading />
             <Main />
-            <Footer />
         </>
     );
 }
@@ -44,6 +43,7 @@ function App() {
                 <Route path="/confirm-order" element={<ConfirmOrder />} />
                 <Route path="/add-menu" element={<AddMenuPage />} />
             </Routes>
+            <Footer />
         </>
     );
 }

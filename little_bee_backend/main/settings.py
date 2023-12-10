@@ -30,7 +30,7 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS= ["http://localhost:3000"]
-ALLOWED_HOSTS = ["localhost:3000",'localhost:8000','localhost','127.0.0.1']
+ALLOWED_HOSTS = ["localhost:3000",'localhost:8000','localhost','127.0.0.1', "*.vercel.app", '*.pages.app', '.pages.app', ".vercel.app"]
 # CSRF_TRUSTED_ORINGINS = ["localhost:3000",'localhost:8000','localhost']
 # CSRF_USE_SESSIONS = False
 
