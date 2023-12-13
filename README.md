@@ -6,11 +6,14 @@ Welcome to the  Little Bee Restaurant App—a feature-rich platform that redefin
 
 The First Phase of A Restaurant app implementation( Features: Table reservation, Online Orders)
 
-Author: [Akem Mensah]
+
+Author: Emmanuel Adane [Akem Mensah]
 
 LinkedIn: Your LinkedIn Profile (https://www.linkedin.com/in/akemmensah/)
 
+
 Deployed Site: Visit the Deployed Site (https://the-litle-bee.pages.dev/)
+
 
 Installation:
 
@@ -30,11 +33,14 @@ npm install  # For frontend (React)
 
 npm start  # For frontend (React)
 
+The app should now be accessible at http://localhost:3000.
+
 B) Backend:
 
 cd little_bee_backend (from repo directory)
 
 pip install -r requirements.txt  # For backend (Django)
+
 
 Database Setup:
 
@@ -44,7 +50,9 @@ Run the Application:
 
 python manage.py runserver  # For backend (Django)
 
-The app should now be accessible at http://localhost:3000.
+The backend should now be accessible at http://localhost:8000.
+
+
 
 Usage:
 
@@ -55,6 +63,7 @@ Table Booking: Explore the intuitive interface to book tables hassle-free.
 Online Ordering: Enjoy the convenience of online ordering with a seamless process.
 
 Confirmation Pages: Experience visually appealing confirmation pages for your bookings and orders.
+
 
 Contributing
 
@@ -72,7 +81,9 @@ Push to the branch (git push origin feature/your-feature-name).
 
 Open a pull request.
 
+
 Related Projects
+
 
 Explore related projects and tools that complement the Restaurant App:
 
