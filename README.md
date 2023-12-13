@@ -1,7 +1,8 @@
 # The-Little-Bee-Restaurant
 
 Introduction
-Welcome to the Restaurant App—a feature-rich platform that redefines the dining experience. This app streamlines table booking and online ordering for both customers and restaurant owners, providing a seamless and convenient way to enhance your dining adventures. For a detailed overview of the development journey, check out the final project blog article (...).
+
+Welcome to the  Little Bee Restaurant App—a feature-rich platform that redefines the dining experience. This app streamlines table booking and online ordering for both customers and restaurant owners, providing a seamless and convenient way to enhance your dining adventures. For a detailed overview of the development journey, check out the final project blog article (...).
 
 The First Phase of A Restaurant app implementation( Features: Table reservation, Online Orders)
 
@@ -14,27 +15,21 @@ Deployed Site: Visit the Deployed Site (https://the-litle-bee.pages.dev/)
 Installation:
 A) FrontEnd(React)
 To get started with the Restaurant App, follow these steps:
-
 Clone the Repository:
 git clone https://github.com/AkemMensah/The-Little-Bee-Restaurant.git
 
 Install Dependencies:
-
 cd little_bee_frontend
-
 npm install  # For frontend (React)
 npm start  # For frontend (React)
 
 B) Backend:
-
 cd little_bee_backend (from repo directory)
 pip install -r requirements.txt  # For backend (Django)
 
 Database Setup:
 python manage.py migrate
-
 Run the Application:
-
 python manage.py runserver  # For backend (Django)
 
 The app should now be accessible at http://localhost:3000.
