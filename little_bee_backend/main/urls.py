@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path
 from api.views import homeview, menuview, reservationview,ordersview
 
+# adding apis
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homeview),

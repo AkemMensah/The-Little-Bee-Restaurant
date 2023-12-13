@@ -9,6 +9,7 @@ import {
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+// setting link icons
 const pageLinks = [
     { name: "Home", link: "./index.html" },
     { name: "About", link: "./about.html" },
@@ -17,6 +18,7 @@ const pageLinks = [
     { name: "Reserve a Table", link: "./login.html" },
 ];
 
+// Defining link icons
 const socialLinks = [
     { name: "Facebook", link: "https://www.facebook.com" },
     { name: "Instagram", link: "https://www.instagram.com" },
@@ -24,6 +26,7 @@ const socialLinks = [
     { name: "LinkedIn", link: "https://www.linkedin.com" },
 ];
 
+// Defining the footer component
 function Footer() {
     return (
         <footer>
@@ -79,4 +82,5 @@ function Footer() {
     );
 }
 
+// exporting the footer component
 export default Footer;

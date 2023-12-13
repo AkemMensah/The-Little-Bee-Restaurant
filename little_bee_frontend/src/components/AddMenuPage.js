@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "../styles/addMenu.css";
 
+// Component for adding menu to available menus
 function AddMenu({ form, setForm }) {
     const [success, setSuccess] = useState(false);
 
+    // func that submits menu item to backend database
     function submitAPI(form) {
+        // using fetch API
         fetch("http://localhost:8000/menu/", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -22,6 +25,7 @@ function AddMenu({ form, setForm }) {
             });
     }
 
+    // Check if the post method was a success
     function checkSuccess(success) {
         if (success == true) {
             alert("Menu added successfully");
@@ -30,12 +34,13 @@ function AddMenu({ form, setForm }) {
         }
     }
 
+    // submitForm funct.
     function submitForm(e) {
         e.preventDefault();
         setSuccess(submitAPI(form));
     }
 
-    console.log(form);
+    // console.log(form);
     return (
         <div className="add-menu">
             <h1>Add A New Menu To List</h1>
@@ -100,7 +105,9 @@ function AddMenu({ form, setForm }) {
     );
 }
 
+// Menu page component
 function AddMenuPage() {
+    // Define a use state hook to hold form state
     const [form, setForm] = useState({});
 
     return (
@@ -110,4 +117,5 @@ function AddMenuPage() {
     );
 }
 
+// exporting the menu page component
 export default AddMenuPage;

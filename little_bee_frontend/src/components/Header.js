@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from 'react-router-dom'
 import React from "react";
+
+// Defining the nav bar component
 function Nav() {
   const navigate = useNavigate();
 
   const handleOrders = () => {
     navigate("/order-form")
   }
-
   return (
     <nav className="navlinks">
       <div className="images">
@@ -47,6 +48,7 @@ function Nav() {
   );
 }
 
+// Defining the header component
 function Heading() {
   return (
     <div className="app-header">
@@ -56,4 +58,5 @@ function Heading() {
   );
 }
 
+// Exporting the header component
 export default Heading;

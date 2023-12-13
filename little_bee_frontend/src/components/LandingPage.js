@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import socialLinks from './Footer'
 
+// Defining nav bar for the landing page
 function Nav() {
     const navigate = useNavigate();
 
@@ -45,6 +46,7 @@ function Nav() {
     );
 }
 
+// Defining introductory text for the banner
 function Intro() {
     return (
         <div className="intro">
@@ -60,6 +62,8 @@ function Intro() {
     );
 }
 
+
+// Defining the header for the landing page
 function LHeading() {
     return (
         <div className="lheading">
@@ -69,6 +73,7 @@ function LHeading() {
     );
 }
 
+// Defining the body of the landing page
 function LBody() {
     return (
         <>
@@ -181,6 +186,7 @@ function LBody() {
     );
 }
 
+// Defining the landing page component
 function LandingPage() {
     return (
         <div id="landing-page-container">
@@ -191,4 +197,5 @@ function LandingPage() {
     );
 }
 
+// exporting the landing page
 export default LandingPage;

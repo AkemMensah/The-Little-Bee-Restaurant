@@ -2,6 +2,7 @@ import orderPack from "../images/orderPack.jpg";
 import "../styles/confirmOrder.css";
 import React from "react";
 
+// Defing the order comfirmation page component
 function ConfirmOrder() {
   return (
     <div className="congrats">
@@ -25,4 +26,5 @@ function ConfirmOrder() {
   );
 }
 
+//exporting the order comfirmation page component
 export default ConfirmOrder;

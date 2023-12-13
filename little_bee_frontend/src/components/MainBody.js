@@ -9,13 +9,14 @@ import testimonialsStyle from "../styles/testimonials.css";
 import aboutStyle from "../styles/about.css";
 import { useNavigate } from "react-router-dom";
 
+// Defining the hero section of the homepage
 function HeroSection() {
+  // use useNavige hook
   const navigate = useNavigate();
-
+  // handle navigation to booking form
   const handleBooking = () => {
     navigate("/booking-form")
   }
-
   return (
     <div className="hero">
       <div className="text-image">
@@ -58,6 +59,7 @@ function HeroSection() {
   );
 }
 
+// Defining orders component in the homepage
 function Orders() {
   return (
     <div className="orders">
@@ -83,6 +85,7 @@ function Orders() {
   );
 }
 
+// Defining the highlights component for homepage
 function Highlights({ articles, title, orderBtnLabel }) {
   return (
     <>
@@ -107,6 +110,7 @@ function Highlights({ articles, title, orderBtnLabel }) {
   );
 }
 
+// Defining testimonials component for homepage
 function Testimonials() {
   return (
     <div className="testimonials">
@@ -150,6 +154,7 @@ function Testimonials() {
   );
 }
 
+// Defining the about component for homepage
 function About() {
   return (
     <div className="about">
@@ -179,6 +184,8 @@ function About() {
   );
 }
 
+
+// Define the main component of the home page
 function Main() {
   const { title, articles, orderBtnLabel } = data.highlights.specials;
   return (
@@ -196,4 +203,5 @@ function Main() {
   );
 }
 
+// export the main component
 export default Main;

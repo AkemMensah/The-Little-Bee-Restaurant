@@ -7,7 +7,6 @@ from django.forms import model_to_dict
 from django.views.decorators.csrf import csrf_exempt
 from api.models import Menu
 from api.models import Reservation
-# from api.models import Customer
 from api.models import Order
 from pprint import pprint
 
@@ -16,11 +15,12 @@ from pprint import pprint
 
 # Create your views here.
 
-
+# Create a homeview
 def homeview(request):
     # return HttpResponse("<h1>Hello world</h1>")
     return render(request,"homepage.html",{})
 
+#Create a menu view
 @csrf_exempt
 def menuview(request):
     if request.method == "GET":
@@ -51,14 +51,16 @@ def menuview(request):
             return JsonResponse({"message":"Failed to delete menu"})
     return HttpResponse(request.method)
 
+# Create reservation view
 @csrf_exempt
 def reservationview(request):
+    # handle 'GET' request
     if request.method == "GET":
         reserv_items = Reservation.objects.all()
         # data = serialize("json", reserv_items)
-        data = [model_to_dict(item) for item in reserv_items]
-        
+        data = [model_to_dict(item) for item in reserv_items] 
         return JsonResponse(data, safe=False)
+    # handle 'POST' request
     if request.method == "POST":
         try:
             body = request.body.decode("utf-8")
@@ -70,7 +72,6 @@ def reservationview(request):
             reservation.refresh_from_db()
             print("\nDATABASE COPY: \n\n")
             pprint(model_to_dict(reservation))
-
             return JsonResponse({"message":"Reservation saved successfully"})
         except Exception as e:
             print(e)
@@ -90,6 +91,7 @@ def reservationview(request):
             return JsonResponse({"message":"Failed to delete Reservation"})
     return HttpResponse(request.method)
 
+# Create orders view
 @csrf_exempt
 def ordersview(request):
     if request.method == "GET":

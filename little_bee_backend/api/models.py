@@ -2,9 +2,10 @@ from django.db import models
 from datetime import datetime
 from django import forms
 
+# Defining options for occasion field
 occasion_choices = [('Birthday','birthday'),('Wedding','wedding'),('Anniversary','anniversay'),('Business','business'),('Other','other')]
 
-
+# Define the Reservation class
 class Reservation(models.Model):
     customer_name = models.CharField(max_length=50)
     date = models.DateField()
@@ -17,6 +18,7 @@ class Reservation(models.Model):
     class Meta:
         db_table="Reservation"
 
+# Define the 'Menu' class
 class Menu(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=5,decimal_places=2)
@@ -25,6 +27,7 @@ class Menu(models.Model):
     class Meta:
         db_table="Menu"
 
+# Define the 'orders' class
 class Order(models.Model):
     name = models.CharField(max_length=50)
     menu = models.CharField(max_length=50)

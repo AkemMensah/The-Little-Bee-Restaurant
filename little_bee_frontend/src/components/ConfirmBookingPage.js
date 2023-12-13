@@ -2,6 +2,7 @@ import table from "../images/CTA.png";
 import "../styles/confirmBooking.css";
 import React from "react";
 
+// Defining the comfirmation page component
 function ConfirmBooking() {
   return (
     <div className="congrats">
@@ -25,4 +26,5 @@ function ConfirmBooking() {
   );
 }
 
+// exporting the booking page component
 export default ConfirmBooking;

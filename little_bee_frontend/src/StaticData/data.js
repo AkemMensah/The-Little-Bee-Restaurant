@@ -1,5 +1,6 @@
 import * as images from '../images/index';
 
+// static data to be exported
 const data = {
     highlights : {
     specials:{
@@ -41,5 +42,6 @@ const data = {
 }   
 }
 
+// exporting the static data
 export default data;
 

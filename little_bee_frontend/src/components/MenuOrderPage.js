@@ -2,6 +2,7 @@ import "../styles/menuOrder.css";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+// submit API function
 async function submitAPI(form) {
     const response = await fetch("http://localhost:8000/order/", {
         method: "POST",
@@ -15,6 +16,7 @@ async function submitAPI(form) {
     return false;
 }
 
+// Define the order form function component
 function Orderform({ form, setForm }) {
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
@@ -134,6 +136,7 @@ function Orderform({ form, setForm }) {
     );
 }
 
+// Defining menu order component
 function MenuOrder() {
     const [form, setForm] = useState({});
     return (
@@ -143,4 +146,5 @@ function MenuOrder() {
     );
 }
 
+// export the menu order component
 export default MenuOrder;

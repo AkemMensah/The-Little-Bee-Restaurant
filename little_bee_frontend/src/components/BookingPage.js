@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import "../styles/booking.css";
 import { useNavigate } from "react-router-dom";
 
+// function that supplies available times
 function fetchAPI(date)
 {
   return ["00:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00"];
 }
 
+// function that sends reservation details to backend
 async function submitAPI(form)
 {
   const response = await fetch("http://localhost:8000/reservation/", {
@@ -22,13 +24,16 @@ async function submitAPI(form)
     return false;
 }
 
+// booking form component
 function BookingForm({ form, setForm })
 {
+  // Defining state variables
   const [availabilities, setAvailabilities] = useState([]);
   const [success, setSuccess] = useState(false);
   const [validForm, setValidForm] = useState(false);
   const navigate = useNavigate();
 
+  // Defining placeholder for the fields
   const placeholders = {
     name: "Enter name",
     phone: "Enter phone number",
@@ -40,12 +45,14 @@ function BookingForm({ form, setForm })
     email: "Enter email",
   };
 
+  // funct that checks email validity
   const isValidEmail = () =>
   {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(form.email);
   };
 
+  // funct that checks form validity
   const isValidForm = () =>
     form?.customer_name?.length > 3 &&
     form?.phone &&
@@ -54,6 +61,8 @@ function BookingForm({ form, setForm })
     form?.no_of_guests >= 1 &&
     form?.occasion &&
     isValidEmail();
+
+  // check if form is submitted and navigate to confirmation page
   useEffect(() =>
   {
     if (success == true)
@@ -62,22 +71,26 @@ function BookingForm({ form, setForm })
     }
   }, [success]);
 
+  // check form validity
   useEffect(() =>
   {
     setValidForm(isValidForm());
   }, [form]);
 
+  // funct that submits the form
   async function submitForm(e)
   {
     e.preventDefault();
     setSuccess(await submitAPI(form));
   }
 
+  // funct that chect available dates
   function checkAvailabilities(date)
   {
     setAvailabilities(fetchAPI(date));
   }
 
+  // funct that sets date on date change
   function handleDateChange(e)
   {
     e.preventDefault();
@@ -215,8 +228,10 @@ function BookingForm({ form, setForm })
   );
 }
 
+// Define the booking page component
 function BookingPage()
 {
+  // Define the initial state of the form
   const [form, setForm] = useState({
     customer_name: "",
     phone: "",
@@ -228,10 +243,12 @@ function BookingPage()
     special: "",
   });
   return (
+    // render the booking form
     <div className="booking-page">
       <BookingForm form={form} setForm={setForm} />
     </div>
   );
 }
 
+//export the booking page component
 export default BookingPage;
