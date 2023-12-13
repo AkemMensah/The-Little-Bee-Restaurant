@@ -18,7 +18,8 @@ from pprint import pprint
 
 
 def homeview(request):
-    return HttpResponse("<h1>Hello world</h1>")
+    # return HttpResponse("<h1>Hello world</h1>")
+    return render(request,"homepage.html",{})
 
 @csrf_exempt
 def menuview(request):
