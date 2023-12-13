@@ -35,6 +35,7 @@ npm start  # For frontend (React)
 
 The app should now be accessible at http://localhost:3000.
 
+
 B) Backend:
 
 cd little_bee_backend (from repo directory)
