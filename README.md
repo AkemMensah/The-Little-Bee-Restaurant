@@ -2,7 +2,7 @@
 
 Introduction
 
-Welcome to the  Little Bee Restaurant App—a feature-rich platform that redefines the dining experience. This app streamlines table booking and online ordering for both customers and restaurant owners, providing a seamless and convenient way to enhance your dining adventures. For a detailed overview of the development journey, check out the final project blog article (...).
+Welcome to the  Little Bee Restaurant App—a feature-rich platform that redefines the dining experience. This app streamlines table booking and online ordering for both customers and restaurant owners, providing a seamless and convenient way to enhance your dining adventures. For a detailed overview of the development journey, check out the final project blog article (https://www.linkedin.com/pulse/crafting-seamless-dining-experience-journey-app-akem-mensah-lgyne).
 
 The First Phase of A Restaurant app implementation( Features: Table reservation, Online Orders)
 
@@ -34,6 +34,7 @@ npm install  # For frontend (React)
 npm start  # For frontend (React)
 
 The app should now be accessible at http://localhost:3000.
+
 
 B) Backend:
 
