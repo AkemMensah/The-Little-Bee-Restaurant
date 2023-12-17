@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>{% block title %}Home{% endblock %}</title>
 </head>
 <body>
-    <h1>Hello world!</h1>
-    {{request.user.is_authenticated}}
-    <p>This is Django showcase!</p>
+    {% include 'nav.html' %}
+    <h1> I wont be changed</h1>
+
     {% block content %}
-    I will be replaced
-    {% endblock %}    
+    <h1>Hello world!</h1>
+    <p>This is Django showcase! But I will be replaced by one of my children soon.</p>
+
+{% endblock %}
+
+{% block change %}
+<div id='change'>
+   <p>make me a list</p>
+</div>
+{% endblock %}
 </body>
 </html>

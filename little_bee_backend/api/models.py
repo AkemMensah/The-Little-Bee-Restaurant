@@ -37,3 +37,23 @@ class Order(models.Model):
     address = models.TextField()
     class Meta:
         db_table="Order"
+
+# testing forms
+class OrdersForm(models.Model):
+    name = models.CharField(max_length=50)
+    menu = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50)
+    email = models.EmailField()
+    request = models.CharField(max_length=50)
+    address = models.TextField()
+    class Meta:
+        db_table="OrdersForm"
+
+
+# testing rawhtmlforms
+class RawhtmlForms(models.Model):
+    username = models.CharField(max_length=30)
+    email = models.CharField(max_length=50)
+    class Meta:
+        db_table="RawhtmlForms"
+

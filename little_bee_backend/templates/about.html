@@ -1,2 +1,18 @@
-<h1>About</h1>
-<p>The about page</p>
+{% extends 'homepage.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1> About Section </h1>
+
+<p>The about page is here. We show you all about the site</p>
+
+{% endblock %}
+
+{% block change %}
+<h1>Our app features</h1>
+<ul>
+    <li> Booking feature</li>
+    <li> OrderOnline feature</li>
+</ul>
+{% endblock %}

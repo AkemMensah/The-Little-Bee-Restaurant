@@ -1,0 +1,25 @@
+{% extends 'homepage.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<p>
+    {{ text|capfirst }}, {{ number }}
+</p>
+{% endblock %}
+
+{% block change %}
+<ul>
+    {% for item in list %}
+   
+    {% if item|length == 5 %}
+        <li>{{item|length}} </li>
+        {% elif item|length == 7 %}
+        <li>length is 7</li>
+        {% else %}
+        {{ item|length}}
+
+ {% endif %}
+{% endfor %}
+</ul>
+{% endblock %}
