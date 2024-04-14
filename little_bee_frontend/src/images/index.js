@@ -19,6 +19,15 @@ import reserve from "./Screenshot18.png";
 import order from "./Screenshot19.png";
 import confirm1 from "./Screenshot21.png";
 import confirm2 from "./Screenshot23.png";
+import diner from "./diner.jpg";
+import lunch from "./lunch.jpg";
+import breakfast from "./all_images/breakfast1.jpg";
+import snacks from "./snacks.jpg";
+import breakfast1 from "./lovely_breakfast.jpg";
+import brunch from "./lovely_brunch.jpg";
+import chicken from "./chicken.jpg"
+
+
 
 export {
     greek,
@@ -42,4 +51,11 @@ export {
     confirm1,
     confirm2,
     reserve,
+    breakfast,
+    snacks,
+    lunch,
+    diner,
+    breakfast1,
+    brunch,
+    chicken
 };
