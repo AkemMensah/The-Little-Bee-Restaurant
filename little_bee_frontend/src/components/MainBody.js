@@ -2,11 +2,11 @@ import data from "../StaticData/data";
 import React from "react";
 import * as images from "../images/index";
 import couples from "../images/couples.png";
-import heroStyle from "../styles/hero.css";
-import ordersStyle from "../styles/orders.css";
-import highlightsStyle from "../styles/highlights.css";
-import testimonialsStyle from "../styles/testimonials.css";
-import aboutStyle from "../styles/about.css";
+import "../styles/hero.css";
+import "../styles/orders.css";
+import "../styles/highlights.css";
+import "../styles/testimonials.css";
+import "../styles/about.css";
 import { useNavigate } from "react-router-dom";
 
 // Defining the hero section of the homepage
