@@ -11,6 +11,7 @@ import ConfirmOrder from "./components/ConfirmOrderPage";
 import AddMenuPage from "./components/AddMenuPage";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function HomePage() {
     return (
@@ -25,7 +26,7 @@ function LandingPageElements() {
     return (
         <>
             <LandingPage />
-            <Footer />
+            {/* <Footer /> */}
 
         </>
     );
