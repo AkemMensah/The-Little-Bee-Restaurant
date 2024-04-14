@@ -6,7 +6,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* background-color: cadetblue; */
+    background-color: rgb(175, 217, 219);
     border-radius: 0.5rem;
     font-size: 20px;
     font-weight: bold;

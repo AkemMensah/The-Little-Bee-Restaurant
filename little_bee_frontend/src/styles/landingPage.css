@@ -26,13 +26,18 @@
 
 .llinks li {
     list-style: none;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 0 0.5rem;
     border-radius: 0.8rem;
     /* background-color: green; */
     font: 1.5rem solid white;
     font-weight: bolder;
     color: white;
+}
+.reservations{
+    background-color: red;
+}
+.llinks li:hover{
     border: 0.2rem solid wheat;
 }
 .llinks li a {
@@ -61,21 +66,25 @@
     opacity: 1;
     width: 80%;
 }
-.intro-text p {
-    font-size: 1.9rem;
+.intro-text h1 {
+    text-align: center;
+    /* font-size: 1.9rem; */
 }
 
 .lheading {
     width: 100%;
-    height: 35rem;
-    background-image: url("../images/banner.png");
+    height: 40rem;
+    /* background-image: url("../images/lunch.jpg"); */
+    background-image:url("https://static.wixstatic.com/media/f925d3_c8bdf28314df416aa4d1e7e6b5265415~mv2.jpg/v1/fill/w_980,h_662,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f925d3_c8bdf28314df416aa4d1e7e6b5265415~mv2.jpg");
     background-size: cover;
     background-color: black;
 }
 
 .body {
+    height:220px;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     gap: 1rem 0rem;
     align-items: center;
     justify-content: center;
@@ -83,15 +92,19 @@
 }
 
 .body div {
-    width: 95%;
-    height: 30rem;
+    /* width: 95%; */
+    /* height: 22rem; */
     background-color: lightgray;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 0.5rem;
+    /* border-radius: 1rem; */
+    border-radius: 50%;
     margin: 2%;
+}
+.body div img{
+    border-radius: 50%;
 }
 .body div p {
     margin: 3%;
