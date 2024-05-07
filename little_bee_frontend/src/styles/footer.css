@@ -1,12 +1,13 @@
 footer {
-    margin-top: 0;
-    margin-left: 1rem;
-    min-height: 40vh;
+    margin-top: 10px;
+    /* margin-left: 1rem; */
+    min-height: 50vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(175, 217, 219);
+    /* background-image: url(../images/diner.jpg); */
+    background-color: rgb(88, 82, 67);
     border-radius: 0.5rem;
     font-size: 20px;
     font-weight: bold;
@@ -29,6 +30,14 @@ footer {
         transform: rotate(360deg);
     }
 }
+@keyframes logo-size{
+    from {
+        font-size: 30px;
+    }
+    to {
+        font-size: 45px;
+    }
+}
 .fLogo {
     margin-top: 3rem;
     width: 20%;
@@ -49,26 +58,33 @@ footer {
     animation: fLogo-spin infinite 20s linear;
 }
 .fLogo img:hover {
-    animation: fast-fLogo-spin infinite 1s linear;
+    animation: logo-size infinite 1s linear;
 }
 
 .fLogo a {
     text-decoration: none;
-    /* color: blue; */
+    color: whitesmoke;
     font: 1.5rem bold sans-serif;
     padding: 0 rem 0 0.2rem;
     position: absolute;
     bottom: -3rem;
     right: 7rem;
-    background-color: rgb(243, 246, 43);
+    /* background-color: rgb(209, 210, 193); */
 }
 
 .fLogo a:hover {
     color: white;
     background-color: #123910c0;
+    padding:5px;
+    border-radius: 10px;
+    margin: 20px;
+}
+.fLogo p{
+    margin-top:20px;
 }
 
 .contact {
+    color: white;
 }
 
 .links ul {
@@ -78,6 +94,7 @@ footer {
 }
 .links p {
     margin: 0.5rem 0 0.5rem 0;
+    color: white;
 }
 .links ul li {
     padding: 0.6rem;
@@ -86,7 +103,7 @@ footer {
 
 .links ul li a {
     text-decoration: none;
-    /* color: blue; */
+    color: white;
 }
 
 .links ul li a:hover {
@@ -99,15 +116,17 @@ footer {
 }
 .social p {
     margin: 0.5rem 0 0.5rem 0;
+    color:white;
 }
 
 .social ul li {
     list-style: none;
     padding: 0.6rem;
+    font-size: 40px;
     /* background-color: blue; */
 }
 .social ul li a {
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 @media screen and (max-width: 768px) {
