@@ -2,8 +2,7 @@ import React from "react";
 import * as images from '../images/index';
 import "../styles/landingPage.css";
 import { useNavigate } from "react-router-dom";
-import Carousel from 'react-bootstrap/Carousel';
-import CarouselComp from "./Carousel.js"
+// import Carousel from 'react-bootstrap/Carousel';
 
 
 
@@ -80,39 +79,46 @@ function LBody()
 {
     return (
         <>
-            <CarouselComp />
+            <div className="category">
+                <h1>We Serve You:</h1>
+                <section className="body">
 
-            {/* <img src={images.brunch} /> */}
+                    <a href="#">
+                        <div className="item">
+                            <h2>Breakfast</h2>
+                            <img src={images.breakfast1} />
 
-            {/* <section className="body">
-                <div className="Carousel.Item">
-                    <h2>Breakfast</h2>
-                    <img src={images.breakfast1} />
+                        </div>
+                    </a>
 
-                </div>
-                <div className="Carousel.Item">
-                    <h2>Lunch</h2>
-                    <img src={images.lunch} />
+                    <a href="#">
+                        <div className="item">
+                            <h2>Lunch</h2>
+                            <img src={images.lunch} />
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div className="item">
+                            <h2>Dinner</h2>
+                            <img src={images.diner} />
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div className="item">
+                            <h2>Brunch</h2>
+                            <img src={images.snacks} alt='snacks' />
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div className="item">
+                            <h2>A La Carte</h2>
+                            <img src={images.chicken} alt='snacks' />
+                        </div>
+                    </a>
+                </section>
 
-                </div>
-                <div className="Carousel.Item">
-                    <h2>Dinner</h2>
-                    <img src={images.diner} />
-
-                </div>
-                <div className="Carousel.Item">
-                    <h2>Brunch</h2>
-                    <img src={images.snacks} alt='snacks' />
-
-                </div>
-                <div className="Carousel.Item">
-                    <h2>A La Carte</h2>
-                    <img src={images.chicken} alt='snacks' />
-                </div>
-            </section> */}
-            
-            {/* <ul> */}
-            {/* {socialLinks.map((item, index) => {
+                {/* <ul> */}
+                {/* {socialLinks.map((item, index) => {
                                 return (
                                     <li key={index}>
                                         <a href={item.url} target="_blank">
@@ -122,7 +128,33 @@ function LBody()
                                 );
                             })} */}
 
-            {/* </ul> */}
+                {/* </ul> */}
+            </div>
+
+            <div className="services">
+                <p>What are you <br/> feeling today?</p>
+                <div className="image">
+
+                </div>
+                <div className="buttons">
+                    <button className="dine-in">
+                        Dine in
+                    </button>
+                    <button className="delivery">
+                        Delivery
+                    </button>
+                </div>
+            </div>
+            <div className="locations">
+                <div className="osu">
+                    <img src="" />
+                    <h2>OSU</h2>
+                    <p>
+                        <span className='phone'>+233248943700</span>
+                        <span className="text">Larma</span>
+                    </p>
+                </div>
+            </div>
         </>
     );
 }
@@ -133,7 +165,6 @@ function LandingPage()
     return (
         <div id="landing-page-container">
             <LHeading />
-            <h1>Our Meals Category</h1>
             <LBody />
         </div>
     );

@@ -32,7 +32,8 @@ function Footer() {
         <footer>
             <div className="fLogo">
                 <img width="150" src={Bee} alt="Bee" />
-                <a href="littlebee@gmail.com">Email Us</a>
+                <p>Little Bee Restaurant</p>
+                
             </div>
             <div className="contact">
                 <p>Address:</p>
@@ -40,6 +41,7 @@ function Footer() {
                 <p>P.O.Box C348</p>
                 <p>Accra, Ghana, Lemon street</p>
                 <p>Tel: +623-456-7890</p>
+                <a href="littlebee@gmail.com">Email Us</a>
             </div>
 
             <div className="links">
