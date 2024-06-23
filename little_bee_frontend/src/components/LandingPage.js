@@ -2,9 +2,6 @@ import React from "react";
 import * as images from '../images/index';
 import "../styles/landingPage.css";
 import { useNavigate } from "react-router-dom";
-// import Carousel from 'react-bootstrap/Carousel';
-
-
 
 // Defining nav bar for the landing page
 function Nav()
@@ -24,7 +21,7 @@ function Nav()
                     width="90"
                     height="60"
                 />
-                <h1>LITTLE BEE RESTAURANT</h1>
+                <h1>LITTLE BEE</h1>
             </div>
             <ul className="llinks">
                 <li>
@@ -61,7 +58,6 @@ function Intro()
         </div>
     );
 }
-
 
 // Defining the header for the landing page
 function LHeading()
