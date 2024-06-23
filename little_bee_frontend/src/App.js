@@ -26,7 +26,6 @@ function LandingPageElements() {
     return (
         <>
             <LandingPage />
-            {/* <Footer /> */}
 
         </>
     );
