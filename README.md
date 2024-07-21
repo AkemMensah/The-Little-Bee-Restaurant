@@ -12,7 +12,7 @@ Author: Emmanuel Adane [Akem Mensah]
 LinkedIn: Your LinkedIn Profile (https://www.linkedin.com/in/akemmensah/)
 
 
-Deployed Site: Visit the Deployed Site (https://the-litle-bee.pages.dev/)
+Deployed Site: Visit the Deployed Site (...)
 
 
 Installation:
