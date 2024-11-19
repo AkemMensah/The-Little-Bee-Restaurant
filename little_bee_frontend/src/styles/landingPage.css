@@ -1,62 +1,15 @@
-/* #landing-page-container {
-    margin: 0, 5%;
-} */
-
-.navigate {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: black;
-    /* position: fixed; */
-}
-.navigate
-
-.logo {
-    margin: 30px 0.5rem;
-    display: flex;
-    flex-direction: row;
-    color: wheat;
-}
-.logo img {
-    width: auto;
-    height: 3rem;
-}
-.logo h1{
-    font-size: 25px;
-}
-.llinks {
-    display: flex;
-    flex-direction: row;
-    columns: white;
+/* main page */
+#landing-page-container {
+    position: relative;
 }
 
-.llinks li {
-    list-style: none;
-    /* width: 150px; */
-    margin: 30px 0.5rem;
-    padding:10px 10px;
-    border-radius: 20px;
-    font: 1.5rem solid white;
-    font-weight: bolder;
-    color: white;
-}
-.reservations{
-    background-color:red;
-}
-.llinks li:hover{
-    border: 0.2rem solid wheat;
-}
-.llinks li a {
-    color: white;
-    text-decoration: none;
-}
-.llinks li:hover {
-    background-color: transparent;
-    cursor: pointer;
-    color: wheat;
-}
+/* navbar */
+
+
+/* intro line */
 .intro {
-    margin-top: 5rem;
+    position: absolute;
+    top: 15%;
     background-color: #00000078;
     text-align: center;
     color: wheat;
@@ -67,41 +20,100 @@
     justify-content: center;
     text-align: justify;
 }
-
 .intro-text {
     opacity: 1;
     width: 80%;
 }
 .intro-text h1 {
     text-align: center;
-    /* font-size: 1.9rem; */
 }
 
+/* meal category component */
 .lheading {
     width: 100%;
     height: 40rem;
-    /* background-image: url("../images/lunch.jpg"); */
     background-image:url("https://static.wixstatic.com/media/f925d3_c8bdf28314df416aa4d1e7e6b5265415~mv2.jpg/v1/fill/w_980,h_662,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f925d3_c8bdf28314df416aa4d1e7e6b5265415~mv2.jpg");
     background-size: cover;
-    background-color: black;
 }
-.category{
+.category {
+    
     margin-top: 20px;
-    background-image: url('../images/bugger.jpg');
-    background-size: cover;
-    /* background-color: whitesmoke; */
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+    opacity: 0.9;
 }
 .category h1{
     color: white;
-    /* background-color: red; */
 }
 .category a{
     text-decoration:none;
     color:whitesmoke;
 }
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px;
+    width: calc(100% - 30px); 
+}
+.carousel a {
+    text-decoration: none;
+}
+.item {
+    min-width: 300px; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.item h2{
+    color:#000;
+    font-style: italic;
+}
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(79, 65, 28);
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+.scroll-button:hover {
+    opacity: 1;
+}
+.scroll-button.left {
+    left: 0;
+}
+.scroll-button.right {
+    right: 0;
+}
+
+
+/* Services  */
 .services{
     width:100%;
-    height:600px;
+    height:400px;
     position:relative;
     background-color: black;
     
@@ -110,23 +122,23 @@
     position: absolute;
     color:whitesmoke;
     font:80px bolder ;
-    left:30%;
+    left:15%;
     bottom: 40%;
     z-index:10;
 }
 .services .image{
     background-image: url(../images/bowls-of-food.jpg);
-    width:400px;
-    height:450px;
+    width:300px;
+    height:350px;
     background-color: whitesmoke;
     position: absolute;
-    right: 20%;
+    right: 15%;
     top: 10%;
 }
 .services .buttons{
     position: absolute;
-    bottom: 20%;
-    left:30%;
+    bottom: 18%;
+    left:33%;
     font-size: 30px;
 }
 .dine-in{
@@ -142,40 +154,176 @@
     margin:20px 40px;
     background-color: black;
     color:white;
+}
+.delivery:hover,.dine-in:hover{
+    background-color: goldenrod;
+}
 
+/* Carousel component for small devices */
+.little_bee_carousel {
+    display:none;
+    text-align: center;
+    position: relative;
 }
-.body {
-    height: 300px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1rem 0rem;
+
+.carousel-container {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 2rem 0 1rem 0;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
 }
-.body div {
-    /* width: 150px; */
-    /* height: 150px; */
-    background-color: lightgray;
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.image-wrapper-carousel {
+    position: relative;
+    width: 100%;
+    
+}
+
+/* .image {
+    width:100%;
+    display: block;
+} */
+
+/* .description {
+    display: none;
+} */
+
+/* .title-bottom {
+    display: block;
+} */
+
+/* .carousel-button {
+    background: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+} */
+
+.carousel-button.left {
+    left: 0;
+    background-color: goldenrod;
+}
+
+.carousel-button.right {
+    right: 0;
+    background-color: goldenrod;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: row;
+    }
+    .carousel-item {
+        flex: 0 0 100%;
+    }
+    .image {
+        width:90%;
+        display: block;
+    }
+    
+}
+
+/* about component  */
+.little_bee_abt{
+    background-color: white;
+}
+.abt_title{
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 2rem 0 0 0;
+}
+.image-hover-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding: 0 6rem;
+}
+.image-hover-item {
+    position: relative;
+    width: 250px; /* Adjust the size as needed */
+    height: 440px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.image-hover-item:hover{
+    .title-bottom{
+        opacity: 0;
+    }
+}
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 85%;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 0.5rem;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    /* border-radius: 1rem; */
-    border-radius: 50%;
-    margin: 2%;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    border-radius: 0.5rem;
+    overflow: visible;
+
 }
-.body div img{
-    border-radius: 50%;
+.description h2{
+    margin-bottom: 1rem;
+    font-style: italic;
 }
-.body div p {
-    margin: 3%;
+.description p{
+    font-size: 1rem;
+    text-align:center;
+    padding: 0 0.2rem;
 }
 
-.body div img {
-    width: 70%;
-    height: 80%;
+.image-wrapper:hover .image {
+    opacity: 0;
+}
+
+.image-wrapper:hover .description {
+    opacity: 1;
+}
+
+.title-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
 }
 
 .labout {
@@ -190,10 +338,190 @@
 
 .about .text{
     margin:0 0 20rem 0;
-    background-color:green ;
+    /* background-color:green ; */
     width:60%;
 }
 .about video{
     width: 30%;
     height:auto;
+}
+
+
+
+
+
+
+/* styling for the WorkingHoursAndEvents component */
+.working-hours-events-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.working-hours, .events {
+    flex: 1;
+    margin: 0 10px;
+}
+.working-hours,.events h2{
+    color: white;
+}
+.event-item{
+    /* background-color:red; */
+}
+.working-hours p{
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 2.5rem;
+}
+h2 {
+    color: #333;
+    border-bottom: 2px solid #ff8c00;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .llinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70%;
+        right: 3%;
+        /* padding: 10px 0; */
+    }
+    .llinks li{
+        list-style: none;
+        border-radius: 0.5rem;
+        font: 1.2rem solid white;
+        font-weight: bolder;
+        align-self: center;
+        border: 1px solid gold;
+        margin: 0.3rem 0;
+        padding: 0.2rem 1rem;
+    }
+
+    .llinks.open li:hover {
+        /* background-color: transparent; */
+        cursor: pointer;
+        color: wheat;
+        /* border: 0.1rem solid wheat; */
+    }
+    .llinks.open {
+        display: flex;
+        /* color: black; */
+        /* background-color:white; */
+        /* opacity: 0.5; */
+        margin-bottom: 2rem;
+
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: white;
+    }
+    .little_bee_abt{
+        display: none;
+    }
+    .logo h1{
+        display: none;
+    }
+    .services p{
+        position: absolute;
+        color:whitesmoke;
+        /* color:#ff8c00; */
+        font:50px bolder ;
+        left:8%;
+        /* bottom: 40%; */
+        top: 20%;
+        z-index:10;
+    }
+    .services .buttons{
+            position: absolute;
+            bottom: 7%;
+            left:5%; 
+            font-size: 20px;
+        }
+        .dine-in{
+            width: 115px;
+            height: 75px;
+            border-radius:30px;
+            margin:20px 20px;
+        }
+        .delivery{
+            width: 115px;
+            height: 75px;
+            border-radius:30px;
+            margin:20px 20px;
+            background-color: black;
+            color:white;
+        }
+        .delivery:hover,.dine-in:hover{
+            background-color: goldenrod;
+        }
+        .working-hours-events-container{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+        .working-hours ul{
+            margin-left: 1rem;
+        }
+        .event-list{
+            margin-left: 3rem;
+            align-self: center;
+            text-align: center;
+        }
+        .little_bee_carousel{
+            display:flex;
+            flex-direction: column;
+        }
+        
 }

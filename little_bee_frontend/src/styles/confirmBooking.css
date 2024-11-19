@@ -73,7 +73,7 @@
     font-weight: bold;
     color: #F4CE14;
     text-align: center;
-    background-color: green;
+    /* background-color: green; */
     border-radius: 1rem;
 }
 .bye button{
@@ -89,7 +89,7 @@
     cursor: pointer;
 }
 .bye button:hover{
-    background-color: #2e7821;
+    /* background-color: #2e7821; */
     color: white;
     cursor: pointer;
 }

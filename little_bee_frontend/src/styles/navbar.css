@@ -1,0 +1,219 @@
+/* navbar */
+.navigate {
+    padding: 10px 20px;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 15vh;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+    margin: 1rem 0.5rem 0 0;
+    display: flex;
+    flex-direction: row;
+    color: wheat;
+}
+.logo img {
+    width: 2.5rem;
+    height: 2rem;
+    border-radius: 0.9rem;
+}
+.logo h1{
+    font-size: 25px;
+}
+
+@keyframes app-logo-pump{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.2);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  .app-logo{
+    pointer-events: none;
+    
+    animation: app-logo-pump infinite 2s linear;
+  }
+
+
+
+
+
+.llinks {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+}
+.llinks li {
+    list-style: none;
+    margin: 1.5rem 0.3rem;
+    padding:0.2rem 0.25rem;
+    border-radius: 0.5rem;
+    font: 1rem solid white;
+    font-weight: bolder;
+    align-self: center;
+    /* background-color: red; */
+}
+.reservations{
+    border: 0.15rem solid wheat;
+}
+
+.llinks li a {
+    color: white;
+    text-decoration: none;
+}
+.llinks li:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: wheat;
+    border: 0.1rem solid wheat;
+}
+.menu-toggle {
+    display: none;
+    font-size: 20px;
+    background: white;
+    cursor: pointer;
+    height: 2rem;
+    margin: 1.3rem 2rem 2rem 2rem;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.dropdown-button:hover + .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+
+
+/* Navbar item */
+.family {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #f9f9f9;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    /* font: 1rem solid bolder; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    /* background-color: #ddd; */
+    background-color: transparent;
+}
+
+.family:hover .dropdown-content {
+    display: block;
+}
+
+.family:hover .dropdown-button {
+    background-color: transparent;
+}
+.fam{
+    padding: 0.2rem;
+}
+.fam:hover{
+    border: 0.1rem solid gold;
+    padding: 0.5rem 0 0.5rem 0.2rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .llinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70%;
+        right: 3%;
+        /* padding: 10px 0; */
+    }
+    .llinks li{
+        list-style: none;
+        border-radius: 0.5rem;
+        font: 1.2rem solid white;
+        font-weight: bolder;
+        align-self: center;
+        border: 1px solid gold;
+        margin: 0.3rem 0;
+        padding: 0.2rem 1rem;
+    }
+
+    .llinks.open li:hover {
+        /* background-color: transparent; */
+        cursor: pointer;
+        color: wheat;
+        /* border: 0.1rem solid wheat; */
+    }
+    .llinks.open {
+        display: flex;
+        /* color: black; */
+        /* background-color:white; */
+        /* opacity: 0.5; */
+        margin-bottom: 2rem;
+
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: white;
+    }
+    .little_bee_abt{
+        display: none;
+    }
+    .logo h1{
+        display: none;
+    }
+}
+
+
+
+
+
+
+

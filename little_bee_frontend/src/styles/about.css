@@ -19,7 +19,7 @@
     flex-direction: column;
     height: 50%;
     border-radius: 2rem;
-    background-color: rgb(84, 98, 60);
+    /* background-color: rgb(84, 98, 60); */
     font-size: 1rem;
 }
 .about .about-text button {
@@ -32,7 +32,7 @@
 .about .about-image {
     height: 40%;
     border-radius: 2rem;
-    background-color: rgb(84, 98, 60);
+    /* background-color: rgb(84, 98, 60); */
 }
 .about .about-image img {
     width: 100%;
@@ -80,7 +80,7 @@
         padding: -10rem;
     }
     .about .about-text button:hover {
-        background-color: rgb(153, 210, 55);
+        /* background-color: rgb(153, 210, 55); */
         color: white;
     }
     .about .about-image p {
