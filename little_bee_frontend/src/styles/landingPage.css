@@ -369,7 +369,7 @@
     color: white;
 }
 .event-item{
-    /* background-color:red; */
+    background-color:red;
 }
 .working-hours p{
     font-size: 1.2rem;
@@ -425,8 +425,6 @@ p {
 
 
 
-
-
 @media (max-width: 768px) {
     .llinks {
         display: none;
@@ -460,6 +458,9 @@ p {
         /* opacity: 0.5; */
         margin-bottom: 2rem;
 
+    }
+    .intro{
+        top: 12%;
     }
 
     .menu-toggle {
@@ -515,6 +516,8 @@ p {
             margin-left: 1rem;
         }
         .event-list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             margin-left: 3rem;
             align-self: center;
             text-align: center;
