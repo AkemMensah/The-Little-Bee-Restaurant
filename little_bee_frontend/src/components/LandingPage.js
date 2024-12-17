@@ -213,7 +213,7 @@ function About_Us_Carousel() {
                         <div className={`carousel-item ${index === currentIndex ? 'active' : ''}`} key={index}>
                             <div className="image-wrapper-carousel">
                                 <img src={shot.src} alt={shot.alt} className="image" />
-                                <div className="description">
+                                <div className="description-carousel">
                                     <h2>{shot.title}</h2>
                                     <p>{shot.description}</p>
                                 </div>

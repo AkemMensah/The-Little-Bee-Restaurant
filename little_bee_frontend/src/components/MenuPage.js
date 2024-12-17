@@ -122,7 +122,7 @@ function Menu() {
                     <h1 className='title'>Menus</h1>
                     <div className='inter'>
                         <p>A culinary tour of BBQ traditions from around this great nation and this beautiful planet. 1.8 million years ago, humans first began cooking meat with fire. For some reason, this hasn’t led to world peace, but we’re pretty sure if we fire up enough BBQ, it will.</p>
-                        <a href='/order-form'><button className="order-button">Order Now</button></a>
+                        {/* <a href='/order-form'><button className="order-button">Order Now</button></a> */}
                     </div>
                 </div>
                 <div className='menu-image'>
@@ -138,7 +138,10 @@ function Menu() {
             </div>
             <div className="menu-categories">
                 <section ref={breakfastRef} className="menu-category">
-                    <h2>Breakfast</h2>
+                    <div className='menu-title'>
+                        <h2>Breakfast</h2>
+                        <a href='/order-form'><button className="order-btn">Order Now</button></a>
+                    </div>
                     <ul>
                         <li>
                             <h3>Pancakes</h3>
@@ -167,7 +170,10 @@ function Menu() {
                     </ul>
                 </section>
                 <section ref={lunchRef} className="menu-category">
-                    <h2>Lunch</h2>
+                    <div className='menu-title'>
+                        <h2>Lunch</h2>
+                        <a href='/order-form'><button className="order-btn">Order Now</button></a>
+                    </div>
                     <ul>
                         <li>
                             <h3>Grilled Chicken Sandwich</h3>
@@ -196,7 +202,10 @@ function Menu() {
                     </ul>
                 </section>
                 <section ref={dinnerRef} className="menu-category">
-                    <h2>Dinner</h2>
+                    <div className='menu-title'>
+                        <h2>Dinner</h2>
+                        <a href='/order-form'><button className="order-btn">Order Now</button></a>
+                    </div>
                     <ul>
                         <li>
                             <h3>Steak and Potatoes</h3>
@@ -225,7 +234,10 @@ function Menu() {
                     </ul>
                 </section>
                 <section ref={dessertRef} className="menu-category">
-                    <h2>Dessert</h2>
+                    <div className='menu-title'>
+                        <h2>Dessert</h2>
+                        <a href='/order-form'><button className="order-btn">Order Now</button></a>
+                    </div>
                     <ul>
                         <li>
                             <h3>Chocolate Cake</h3>
@@ -254,7 +266,10 @@ function Menu() {
                     </ul>
                 </section>
                 <section ref={drinksRef} className="menu-category">
-                    <h2>Drinks</h2>
+                    <div className='menu-title'>
+                        <h2>Drinks</h2>
+                        <a href='/order-form'><button className="order-btn">Order Now</button></a>
+                    </div>
                     <ul>
                         <li>
                             <h3>Mango Smoothie</h3>
@@ -282,6 +297,10 @@ function Menu() {
                         </li>
                     </ul>
                 </section>
+            </div>
+            <div className='note'>
+                <p><em>Menu subject to change based on availability</em></p>
+                <p>Our current menu may not feature accommodations for some allergies and dietary restrictions. Please inquire in advance at info@brescadc.com with any questions regarding the menu.</p>
             </div>
         </div>
     );
